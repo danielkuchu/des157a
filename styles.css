@@ -120,7 +120,8 @@ main nav ul li a {
 main nav ul li {
 
    list-style-type: none;
-   padding: 7px;
+   padding: 5px;
+   font-size: 20px;
 
 }
 
@@ -164,11 +165,15 @@ footer {
    background-color: #6b4e41;
    min-height: 50px;
    padding-top: 10px;
+   text-align: center;
 
 }
 
-footer p {
+footer a {
 
-   text-align: center;
+text-decoration: none;
+color: #271c17;
+font-family: 'Nanum Pen Script', cursive;
+font-size: 100px;
 
 }
