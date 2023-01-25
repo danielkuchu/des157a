@@ -98,7 +98,8 @@ main h2 {
 main {
    box-sizing: border-box;
    padding: 20px;
-   margin-top: 100px;
+   margin:auto;
+   max-width: 1200px;
    padding: auto;
    padding-bottom: none;
    margin-bottom: none;
