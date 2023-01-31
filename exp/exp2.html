@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Experiments</title>
+</head>
+
+<body>
+    <h1>Experiment 2</h1>
+    <h2>Fav Color</h2>
+
+    <script>
+
+        var favColor = prompt("What is your favorite color?", "Red, Green, Blue, Purple, or Yellow");
+        var allH1s = document.getElementsByTagName('h1');
+
+        if (favColor === "Red" || favColor === "red") {
+
+            for (var i = 0; i < allH1s.length; i++) {
+
+                allH1s[i].style.color = "red";
+
+            }
+        } else if (favColor === "Blue" || favColor === "blue") {
+
+
+            for (var i = 0; i < allH1s.length; i++) {
+
+                allH1s[i].style.color = "blue";
+
+            }
+        } else if (favColor === "Green" || favColor === "green") {
+
+
+            for (var i = 0; i < allH1s.length; i++) {
+
+                allH1s[i].style.color = "green";
+
+            }
+        } else if (favColor === "Purple" || favColor === "purple") {
+
+
+            for (var i = 0; i < allH1s.length; i++) {
+
+                allH1s[i].style.color = "purple";
+
+            }
+        } else if (favColor === "Yellow" || favColor === "yellow") {
+
+
+for (var i = 0; i < allH1s.length; i++) {
+
+    allH1s[i].style.color = "yellow";
+
+}
+} else {
+
+document.prompt(alert="Doesn't work dummy");
+
+}
+
+
+
+
+    </script>
+
+</body>
+
+</html>
