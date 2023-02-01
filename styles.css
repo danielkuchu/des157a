@@ -107,6 +107,13 @@ header nav ul li a:hover {
 
 }
 
+main nav ul li a:hover {
+
+color: rgb(46, 0, 0);
+transition-duration: 10ms;
+
+}
+
 main h2 {
 
    color: #ffffff;
