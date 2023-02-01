@@ -1,0 +1,85 @@
+header {
+
+    background-color: rgb(172, 125, 71);
+    max-width: 1200px;
+    padding: 75px;
+    
+    }
+
+    h1 {
+
+font-size: 80px;
+
+    }
+
+    header h3 {
+
+text-align: center;
+font-size: 30px;
+color: white;
+
+    }
+
+p, h2 {
+
+max-width: 500px;
+margin: auto;
+padding: auto;
+color: white;
+
+}
+
+
+body article {
+
+background-color: rgb(114, 70, 27);
+max-width: 1200px;
+
+}
+
+body p {
+
+word-spacing: 3px;
+
+}
+
+body h2 {
+
+padding-bottom: 50px;
+
+}
+
+body {
+
+
+    align-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: auto;
+    background-color: rgb(48, 31, 18);
+}
+body h1 {
+
+    text-align: center;
+}
+
+.book1 {
+
+width: 200px;
+height: 700px;
+background-color: maroon;
+border: 4px solid #000000;
+transform: translateX(50px);
+position: relative;
+text-align: center;
+
+
+}
+
+footer {
+
+    background-color: rgb(172, 125, 71);
+    max-width: 1200px;
+    padding: 75px;
+
+}
