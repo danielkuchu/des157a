@@ -9,6 +9,7 @@ header {
     h1 {
 
 font-size: 80px;
+color: white;
 
     }
 
@@ -71,7 +72,8 @@ background-color: maroon;
 border: 4px solid #000000;
 transform: translateX(50px);
 position: relative;
-text-align: center;
+text-align: left;
+padding: 20px;
 
 
 }
