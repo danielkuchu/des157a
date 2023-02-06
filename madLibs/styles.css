@@ -26,6 +26,7 @@ text-decoration: none;
 form {
 
 text-align: center;
+padding-bottom: 70px;
 /* display: flex;
 margin: auto;
 padding: auto; */
@@ -35,11 +36,12 @@ padding: auto; */
 label {
 
     font-family: 'Tangerine', cursive;
+    padding-bottom: 20px;
 
 }
 
-.prof label{
+.prof{
 
-text-align: left;
+padding-bottom: 70px;
 
 }
