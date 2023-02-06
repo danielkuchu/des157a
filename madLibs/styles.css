@@ -1,0 +1,45 @@
+header {
+
+text-align: center;
+padding-bottom: 50px;
+
+}
+
+header h1 {
+
+font-size: 75px;
+
+}
+
+header p {
+
+font-size: 25px;
+
+}
+
+input {
+
+text-decoration: none;
+
+}
+
+form {
+
+text-align: center;
+/* display: flex;
+margin: auto;
+padding: auto; */
+
+}
+
+label {
+
+    font-family: 'Tangerine', cursive;
+
+}
+
+.prof label{
+
+text-align: left;
+
+}
