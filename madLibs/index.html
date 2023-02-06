@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="madScript.js" defer></script>
-    <title>Hogwartz Adventure Madlibs</title>
+    <title>Hogwarts Adventure Madlibs</title>
 </head>
+
 <body>
-    <form >
-        <label input="text" name="verb"></label>
+    <form>
+        <input type="text" id="adj1" name="adj1"><br>
+        <label for="adj1">Adjective</label><br>
+
+        <input type="text" id="tod" name="tod"><br>
+        <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
+
+
+        <input type="text" id="yname" name="yname"><br>
+        <label for="yname">Your name</label><br>
+
     </form>
+    <form>
+
+        <p>Choose a professor</p>
+        <form>
+            <input type="radio" id="snape" name="snape" value="snape">
+            <label for="snape">Snape</label><br>
+            <input type="radio" id="dumbledore" name="dumbledore" value="dumbledore">
+            <label for="dumbledore">Dumbledore</label><br>
+            <input type="radio" id="hagrid" name="hagrid" value="hagrid">
+            <label for="hagrid">Hagrid</label>
+        </form>
+
+        <form>
+
+            <input type="text" id="mean" name="mean"><br>
+            <label for="mean">Insult</label><br>
+
+            <input type="text" id="verb1" name="verb1"><br>
+            <label for="verb1">Traveling verb</label><br>
+
+            <input type="text" id="place" name="place"><br>
+            <label for="place">Magical Place</label><br>
+
+        </form>
+
+        <form>
+
+            <input type="text" id="spell" name="spell"><br>
+            <label for="spell">A magical spell</label><br>
+
+            <input type="text" id="dance" name="dance"><br>
+            <label for="dance">Dance Move</label><br>
+
+        </form>
 </body>
+
 </html>
