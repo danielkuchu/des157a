@@ -2,24 +2,36 @@ header {
 
 text-align: center;
 padding-bottom: 50px;
+background-color: rgb(115, 59, 21);
+height: 200px;
+padding: auto;
+margin: auto;
 
 }
+
 
 header h1 {
 
 font-size: 75px;
+padding: auto;
+margin: auto;
+
 
 }
 
 header p {
 
 font-size: 25px;
+padding: auto;
+margin: auto;
 
 }
 
 input {
 
-text-decoration: none;
+    padding: auto;
+    margin: auto;
+
 
 }
 
@@ -27,9 +39,8 @@ form {
 
 text-align: center;
 padding-bottom: 70px;
-/* display: flex;
 margin: auto;
-padding: auto; */
+padding: auto
 
 }
 
