@@ -15,6 +15,7 @@ header h1 {
 font-size: 75px;
 padding: auto;
 margin: auto;
+font-family: 'EB Garamond', serif;
 
 
 }
@@ -24,6 +25,11 @@ header p {
 font-size: 25px;
 padding: auto;
 margin: auto;
+
+}
+body {
+
+background-color: burlywood;
 
 }
 
