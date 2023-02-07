@@ -29,11 +29,14 @@ margin: auto;
 
 input {
 
-    padding: auto;
+    padding: 20px;
     margin: auto;
-
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
 
 }
+
 
 form {
 
@@ -48,6 +51,7 @@ label {
 
     font-family: 'Tangerine', cursive;
     padding-bottom: 20px;
+    font-size: 30px;
 
 }
 
