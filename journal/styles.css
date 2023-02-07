@@ -1,87 +1,79 @@
 header {
 
-    background-color: rgb(172, 125, 71);
+    height: 250px;
     max-width: 1200px;
-    padding: 75px;
-    
-    }
-
-    h1 {
-
-font-size: 80px;
-color: white;
-
-    }
-
-    header h3 {
-
-text-align: center;
-font-size: 30px;
-color: white;
-
-    }
-
-p, h2 {
-
-max-width: 500px;
-margin: auto;
-padding: auto;
-color: white;
+    background-color: burlywood;
+    text-align: center;
+    margin: auto;
+    padding: auto;
 
 }
 
+header h1 {
 
-body article {
-
-background-color: rgb(114, 70, 27);
-max-width: 1200px;
+    font-size: 100px;
 
 }
 
-body p {
+p,
+h2 {
 
-word-spacing: 3px;
-
-}
-
-body h2 {
-
-padding-bottom: 50px;
+    padding: 5px;
 
 }
+
+.container {
+    width: 1200px;
+    height: 720px;
+    background-color: rgb(97, 47, 14);
+    margin: auto;
+    padding: auto;
+}
+
+#st-box {
+    float: left;
+    width: 200px;
+    height: 700px;
+    background-color: rgb(255, 157, 157);
+    border: solid black;
+    margin: 10px;
+}
+
+#nd-box {
+    float: left;
+    width: 200px;
+    height: 700px;
+    background-color: rgb(77, 148, 255);
+    border: solid black;
+    margin: 10px;
+}
+
+#rd-box {
+    float: left;
+    width: 200px;
+    height: 700px;
+    background-color: rgb(211, 125, 28);
+    border: solid black;
+    margin: 10px;
+}
+
 
 body {
 
-
-    align-content: center;
     max-width: 1200px;
+    background-color: rgb(63, 11, 11);
     margin: auto;
     padding: auto;
-    background-color: rgb(48, 31, 18);
-}
-body h1 {
-
-    text-align: center;
-}
-
-.book1 {
-
-width: 200px;
-height: 700px;
-background-color: maroon;
-border: 4px solid #000000;
-transform: translateX(50px);
-position: relative;
-text-align: left;
-padding: 20px;
-
 
 }
 
 footer {
 
-    background-color: rgb(172, 125, 71);
+    height: 100px;
     max-width: 1200px;
-    padding: 75px;
+    background-color: burlywood;
+    text-align: center;
+    margin: auto;
+    padding: auto;
 
 }
