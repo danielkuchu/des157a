@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
 
 
 </head>
@@ -40,54 +40,61 @@
 
     <div class="main">
         <form>
-            <input type="text" id="adj1" name="adj1"><br>
-            <label for="adj1">Adjective</label><br>
+            <form>
+                <input type="text" id="adj1" name="adj1"><br>
+                <label for="adj1">Adjective</label><br>
+        
+                <input type="text" id="tod" name="tod"><br>
+                <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
+        
+        
+                <input type="text" id="yname" name="yname"><br>
+                <label for="yname">Your name</label><br>
+                
+                <p>Choose a professor</p>
 
-            <input type="text" id="tod" name="tod"><br>
-            <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
-
-
-            <input type="text" id="yname" name="yname"><br>
-            <label for="yname">Your name</label><br>
-
-        </form>
-        <form class="prof">
-
-
-            <p>Choose a professor</p>
-                <input type="radio" id="snape" name="snape" value="snape">
-                <label for="snape">Snape</label>
-                <input type="radio" id="dumbledore" name="dumbledore" value="dumbledore">
-                <label for="dumbledore">Dumbledore</label>
-                <input type="radio" id="hagrid" name="hagrid" value="hagrid">
-                <label for="hagrid">Hagrid</label>
-            </form>
-
-            <form class>
-
+                <div id="professors">
+                <div id="snape">
+                    <img src="images/Frame 3.jpg" width="150" height="200" alt="Professor Snape from Harry Potter">
+                    <input type="radio" id="snape" name="snape" value="snape">
+                    <label for="snape">Snape</label>
+                </div>
+                <div id="dd">
+                    <img src="images/Frame 5.jpg" width="150" height="200" alt="Professor Dumbledore from Harry Potter">
+                    <input type="radio" id="dumbledore" name="dumbledore" value="dumbledore">
+                    <label for="dumbledore">Dumbledore</label>
+                </div>
+                <div id="hag">
+                    <img src="images/Frame 4.jpg" width="150" height="200" alt="Professor Hagrid from Harry Potter">
+                    <input type="radio" id="hagrid" name="hagrid" value="hagrid">
+                    <label for="hagrid">Hagrid</label>
+                </div>
+            </div>
+                <br>
+        
                 <input type="text" id="mean" name="mean"><br>
                 <label for="mean">Insult</label><br>
-
+        
                 <input type="text" id="verb1" name="verb1"><br>
                 <label for="verb1">Traveling verb</label><br>
-
+        
                 <input type="text" id="place" name="place"><br>
                 <label for="place">Magical Place</label><br>
-
-            </form>
-
-            <form>
-
+        
                 <input type="text" id="spell" name="spell"><br>
                 <label for="spell">A magical spell</label><br>
-
+        
                 <input type="text" id="dance" name="dance"><br>
                 <label for="dance">Dance Move</label><br>
-
+        
                 <input type="submit" id="submit" name="Submit" value="submit" class="submit">
-
-            </form>
+        
+        </form>
     </div>
 </body>
+
+<footer>
+
+</footer>
 
 </html>

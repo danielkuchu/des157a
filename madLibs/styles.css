@@ -1,56 +1,50 @@
 header {
 
-text-align: center;
-padding-bottom: 50px;
-background-color: rgb(115, 59, 21);
-height: 200px;
-padding: auto;
-margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+    background-color: rgb(115, 59, 21);
+    height: 200px;
+    padding: auto;
+    margin: auto;
 
 }
 
+h1 {
 
+    font-family: 'EB Garamond', serif;
+
+}
 header h1 {
 
-font-size: 75px;
-padding: auto;
-margin: auto;
-font-family: 'EB Garamond', serif;
+    font-size: 75px;
+    padding: auto;
+    margin: auto;
 
 
 }
 
 header p {
 
-font-size: 25px;
-padding: auto;
-margin: auto;
+    font-size: 25px;
+    padding: auto;
+    margin: auto;
 
 }
+
 body {
 
-background-color: burlywood;
+    text-align: center;
+    background-color: rgb(205, 147, 97);
 
 }
 
-input {
-
-    padding: 20px;
-    margin: auto;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-
-}
 
 
 form {
 
-text-align: center;
-padding-bottom: 70px;
-margin: auto;
-padding: auto
-
+    text-align: center;
+    margin: auto;
+    padding: auto;
 }
 
 label {
@@ -61,8 +55,10 @@ label {
 
 }
 
-.prof{
+#professors {
 
-padding-bottom: 70px;
-
+    display: flex;
+    position: absolute;
+    margin: auto;
+    padding: auto;
 }
