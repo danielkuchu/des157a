@@ -5,7 +5,7 @@ header {
     background-color: burlywood;
     text-align: center;
     margin: auto;
-    padding: auto;
+
 
 }
 
@@ -30,31 +30,35 @@ h2 {
     padding: auto;
 }
 
+
 #st-box {
-    float: left;
-    width: 200px;
-    height: 700px;
+    width: 1000px;
+    height: 200px;
     background-color: rgb(255, 157, 157);
     border: solid black;
     margin: 10px;
+    margin: auto;
+    padding: auto;
 }
 
 #nd-box {
-    float: left;
-    width: 200px;
-    height: 700px;
+    width: 1000px;
+    height: 200px;
     background-color: rgb(77, 148, 255);
     border: solid black;
     margin: 10px;
+    margin: auto;
+    padding: auto;
 }
 
 #rd-box {
-    float: left;
-    width: 200px;
-    height: 700px;
+    width: 1000px;
+    height: 200px;
     background-color: rgb(211, 125, 28);
     border: solid black;
     margin: 10px;
+    margin: auto;
+    padding: auto;
 }
 
 
