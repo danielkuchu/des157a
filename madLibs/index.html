@@ -31,64 +31,59 @@
 </head>
 
 <body>
+    <audio id="myAudio">
+        <source src="audio/01 - Prologue.mp3" type="audio/mp3">
+    </audio>
+
     <header>
 
         <h1>Hogwarts Adventure MadLibs</h1>
         <p>Interactive Media II - DES 157A - Winter 2023</p>
+        <button onclick="playAud()" type="button">Play audio</button>
 
     </header>
+    <!-- <img src="images/image 1.png" width="1200" height="1000" alt="background image" class="bck"> -->
 
     <div class="main">
         <form>
-            <form>
-                <input type="text" id="adj1" name="adj1"><br>
-                <label for="adj1">Adjective</label><br>
-        
-                <input type="text" id="tod" name="tod"><br>
-                <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
-        
-        
-                <input type="text" id="yname" name="yname"><br>
-                <label for="yname">Your name</label><br>
-                
-                <p>Choose a professor</p>
+            <input type="text" id="adj1" name="adj1"><br>
+            <label for="adj1">Adjective</label><br>
 
-                <div id="professors">
-                <div id="snape">
-                    <img src="images/Frame 3.jpg" width="150" height="200" alt="Professor Snape from Harry Potter">
-                    <input type="radio" id="snape" name="snape" value="snape">
-                    <label for="snape">Snape</label>
-                </div>
-                <div id="dd">
-                    <img src="images/Frame 5.jpg" width="150" height="200" alt="Professor Dumbledore from Harry Potter">
-                    <input type="radio" id="dumbledore" name="dumbledore" value="dumbledore">
-                    <label for="dumbledore">Dumbledore</label>
-                </div>
-                <div id="hag">
-                    <img src="images/Frame 4.jpg" width="150" height="200" alt="Professor Hagrid from Harry Potter">
-                    <input type="radio" id="hagrid" name="hagrid" value="hagrid">
-                    <label for="hagrid">Hagrid</label>
-                </div>
+            <input type="text" id="tod" name="tod"><br>
+            <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
+
+
+            <input type="text" id="yname" name="yname"><br>
+            <label for="yname">Your name</label><br>
+
+            <div id="profchoice">
+                <label for="Choose a professor">Choose a Professor:</label>
+                <select id="profs" name="profs">
+                    <option value="snape">Snape</option>
+                    <option value="dumbledore">Dumbledore</option>
+                    <option value="hagrid">Hagrid</option>
+                </select>
+
             </div>
-                <br>
-        
-                <input type="text" id="mean" name="mean"><br>
-                <label for="mean">Insult</label><br>
-        
-                <input type="text" id="verb1" name="verb1"><br>
-                <label for="verb1">Traveling verb</label><br>
-        
-                <input type="text" id="place" name="place"><br>
-                <label for="place">Magical Place</label><br>
-        
-                <input type="text" id="spell" name="spell"><br>
-                <label for="spell">A magical spell</label><br>
-        
-                <input type="text" id="dance" name="dance"><br>
-                <label for="dance">Dance Move</label><br>
-        
-                <input type="submit" id="submit" name="Submit" value="submit" class="submit">
-        
+            <br>
+
+            <input type="text" id="mean" name="mean"><br>
+            <label for="mean">Insult</label><br>
+
+            <input type="text" id="verb1" name="verb1"><br>
+            <label for="verb1">Traveling verb</label><br>
+
+            <input type="text" id="place" name="place"><br>
+            <label for="place">Magical Place</label><br>
+
+            <input type="text" id="spell" name="spell"><br>
+            <label for="spell">A magical spell</label><br>
+
+            <input type="text" id="dance" name="dance"><br>
+            <label for="dance">Dance Move</label><br>
+
+            <input type="submit" id="submit" name="Submit" value="submit" class="submit">
+
         </form>
     </div>
 </body>

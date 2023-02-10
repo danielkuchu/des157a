@@ -2,23 +2,22 @@ header {
 
     text-align: center;
     padding-bottom: 50px;
-    background-color: rgb(115, 59, 21);
-    height: 200px;
+   background-image: url("images/download.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 250px;
     padding: auto;
     margin: auto;
+    box-shadow: 0px 0px 20px black;
 
 }
 
-h1 {
-
-    font-family: 'EB Garamond', serif;
-
-}
 header h1 {
 
     font-size: 75px;
-    padding: auto;
-    margin: auto;
+    font-family: 'EB Garamond', serif;
+    font-size: 75px;
+    padding-top: 30px;
 
 
 }
@@ -26,15 +25,19 @@ header h1 {
 header p {
 
     font-size: 25px;
-    padding: auto;
-    margin: auto;
 
 }
 
 body {
 
     text-align: center;
-    background-color: rgb(205, 147, 97);
+    background-image: url("images/image 1.png");
+    background-color: rgb(61, 14, 14);
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-size: cover;
+    margin: auto;
+    padding: auto;
 
 }
 
@@ -44,13 +47,13 @@ form {
 
     text-align: center;
     margin: auto;
-    padding: auto;
+    padding: 30px;
 }
 
 label {
 
     font-family: 'Tangerine', cursive;
-    padding-bottom: 20px;
+    padding: 30px;
     font-size: 30px;
 
 }
@@ -58,7 +61,6 @@ label {
 #professors {
 
     display: flex;
-    position: absolute;
     margin: auto;
     padding: auto;
 }
