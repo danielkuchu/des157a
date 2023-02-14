@@ -13,13 +13,39 @@ header {
 
 }
 
+header h2 {
+
+color: #fff;
+
+}
+
+#play {
+
+transform: translateY(-175px);
+padding: 5px;
+font: bold;
+border: none;
+margin-bottom: 30px;
+
+
+}
+
+#play:hover {
+
+background-color: #e67a16;
+transition-duration: 0.75s;
+border: none;
+}
+
+
 #fly {
 
 scale: 30%;
-float: left;
 translate: 0 -250px;
 animation: fly 5s infinite;
 animation-delay: 0s;
+padding: 0%;
+margin: 0%;
 
 }
 
@@ -102,7 +128,6 @@ body {
 label {
 
     font-family: 'Tangerine', cursive;
-    padding: 30px;
     font-size: 30px;
 
 }
@@ -111,12 +136,12 @@ input {
     fill: none ;
     border: none;
     border-bottom: 2px solid rgb(49, 0, 0);
+    margin-bottom: 8px;
 
 }
 
 #professors {
 
-    display: flex;
-    margin: auto;
-    padding: auto;
+    margin: 10px;
+    padding: 20px;
 }
