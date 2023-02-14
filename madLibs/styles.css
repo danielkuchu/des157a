@@ -98,7 +98,7 @@ header p {
 .main {
 
     background-image: url("images/image 1.png");
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-position-y: -200px;
     background-size: cover;
     margin: auto;
@@ -129,6 +129,7 @@ label {
 
     font-family: 'Tangerine', cursive;
     font-size: 30px;
+    margin-bottom: 20px;
 
 }
 
