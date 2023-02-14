@@ -98,7 +98,7 @@ header p {
 .main {
 
     background-image: url("images/image 1.png");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-position-y: -200px;
     background-size: cover;
     margin: auto;
@@ -144,4 +144,25 @@ input {
 
     margin: 10px;
     padding: 20px;
+}
+
+#profchoice {
+
+margin: 40px;
+
+}
+
+#submit {
+margin-top: 20px;
+padding: 8px;
+border: none;
+
+}
+
+#submit:hover {
+
+background-color: #424242;
+color: white;
+transition-duration: 0.75s;
+
 }

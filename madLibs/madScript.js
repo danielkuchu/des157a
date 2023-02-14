@@ -42,10 +42,6 @@
 
         madlib.innerHTML=myText;
 
-
-
-
-
     });
 
 
