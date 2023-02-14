@@ -34,49 +34,50 @@
 
     <header>
 
-        <h1>Hogwarts Adventure MadLibs</h1>
+        <h1 class="glow">Hogwarts Adventure MadLibs</h1>
         <p>Interactive Media II - DES 157A - Winter 2023</p>
-        <button id="play">Play</button>
+        <img src="images/flying.png" width="722" height="328" alt="wizard flying on broom graphic" id="fly"> 
+        <button id="play">Cue the dramatic music!</button>
 
     </header>
-    <!-- <img src="images/image 1.png" width="1200" height="1000" alt="background image" class="bck"> -->
 
     <div class="main">
-        <form>
-            <input type="text" id="adj1" name="adj1"><br>
+        <form id="myForm">
+            <input type="text" id="adj1" name="adj1" required><br>
             <label for="adj1">Adjective</label><br>
 
             <input type="text" id="tod" name="tod"><br>
             <label for="tod">Time of Day (<em>Noon,Dawn,Midnight, etc.</em>)</label><br>
 
 
-            <input type="text" id="yname" name="yname"><br>
+            <input type="text" id="yname" name="yname" required><br>
             <label for="yname">Your name</label><br>
 
             <div id="profchoice">
                 <label for="Choose a professor">Choose a Professor:</label>
-                <select id="profs" name="profs">
+                <select id="profs" name="profs" required>
                     <option value="snape">Snape</option>
                     <option value="dumbledore">Dumbledore</option>
                     <option value="hagrid">Hagrid</option>
                 </select>
 
             </div>
+
             <br>
 
-            <input type="text" id="mean" name="mean"><br>
+            <input type="text" id="mean" name="mean" required><br>
             <label for="mean">Insult</label><br>
 
-            <input type="text" id="verb1" name="verb1"><br>
+            <input type="text" id="verb1" name="verb1" required><br>
             <label for="verb1">Traveling verb</label><br>
 
-            <input type="text" id="place" name="place"><br>
+            <input type="text" id="place" name="place" required><br>
             <label for="place">Magical Place</label><br>
 
-            <input type="text" id="spell" name="spell"><br>
+            <input type="text" id="spell" name="spell" required><br>
             <label for="spell">A magical spell</label><br>
 
-            <input type="text" id="dance" name="dance"><br>
+            <input type="text" id="dance" name="dance" required><br>
             <label for="dance">Dance Move</label><br>
 
             <input type="submit" id="submit" name="Submit" value="submit" class="submit">

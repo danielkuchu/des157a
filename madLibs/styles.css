@@ -1,25 +1,66 @@
 header {
 
     text-align: center;
-    padding-bottom: 50px;
-   background-image: url("images/download.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-    height: 250px;
     padding: auto;
     margin: auto;
     box-shadow: 0px 0px 20px black;
+    height: 250px;
+    width: 100%;
+    animation: animateHeader 12s reverse infinite;
+    background-image: url("images/header.png");
+    background-repeat: repeat-x;
+    background-position: 0 0;
 
 }
 
-header h1 {
+#fly {
+
+scale: 30%;
+float: left;
+translate: 0 -250px;
+animation: fly 5s infinite;
+animation-delay: 0s;
+
+}
+
+@keyframes fly {
+    0% { transform: translateY(0); }
+    25%  {transform:translateY(50px); }
+    50%  {transform:translateY(100px); }
+    75% { transform: translateY(50px); }
+    100% { transform: translateY(0); }
+}
+
+
+@keyframes animateHeader {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 6000px 0;
+    }
+}
+
+.glow {
 
     font-size: 75px;
     font-family: 'EB Garamond', serif;
     font-size: 75px;
     padding-top: 30px;
+    color: #fff;
+    animation: glow 2s ease-in-out infinite alternate;
 
+}
 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #da6900, 0 0 40px #ce5d00, 0 0 50px #e08700, 0 0 60px #cf5300, 0 0 70px #e67a16;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #8d0000, 0 0 40px #b40000, 0 0 50px #960000, 0 0 60px #970000, 0 0 70px #a70000, 0 0 80px #ad0000;
+    }
 }
 
 header p {
@@ -28,14 +69,21 @@ header p {
 
 }
 
+.main {
+
+    background-image: url("images/image 1.png");
+    background-repeat: no-repeat;
+    background-position-y: -200px;
+    background-size: cover;
+    margin: auto;
+    padding: auto;
+
+}
+
 body {
 
     text-align: center;
-    background-image: url("images/image 1.png");
     background-color: rgb(61, 14, 14);
-    background-repeat: no-repeat;
-    background-position-y: 100px;
-    background-size: cover;
     margin: auto;
     padding: auto;
 
@@ -43,11 +91,12 @@ body {
 
 
 
-form {
+#myForm {
 
     text-align: center;
     margin: auto;
     padding: 30px;
+    fill: none;
 }
 
 label {
@@ -55,6 +104,13 @@ label {
     font-family: 'Tangerine', cursive;
     padding: 30px;
     font-size: 30px;
+
+}
+
+input {
+    fill: none ;
+    border: none;
+    border-bottom: 2px solid rgb(49, 0, 0);
 
 }
 
