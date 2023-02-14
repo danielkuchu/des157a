@@ -15,46 +15,60 @@ header {
 
 header h2 {
 
-color: #fff;
+    color: #fff;
 
 }
 
 #play {
 
-transform: translateY(-175px);
-padding: 5px;
-font: bold;
-border: none;
-margin-bottom: 30px;
+    transform: translateY(-175px);
+    padding: 5px;
+    font: bold;
+    border: none;
+    margin-bottom: 30px;
 
 
 }
 
 #play:hover {
 
-background-color: #e67a16;
-transition-duration: 0.75s;
-border: none;
+    background-color: #e67a16;
+    transition-duration: 0.75s;
+    border: none;
 }
 
 
 #fly {
 
-scale: 30%;
-translate: 0 -250px;
-animation: fly 5s infinite;
-animation-delay: 0s;
-padding: 0%;
-margin: 0%;
+    scale: 30%;
+    translate: 0 -250px;
+    animation: fly 5s infinite;
+    animation-delay: 0s;
+    padding: 0%;
+    margin: 0%;
 
 }
 
 @keyframes fly {
-    0% { transform: translateY(0); }
-    25%  {transform:translateY(50px); }
-    50%  {transform:translateY(100px); }
-    75% { transform: translateY(50px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(50px);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    75% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
@@ -89,12 +103,6 @@ margin: 0%;
     }
 }
 
-header p {
-
-    font-size: 25px;
-
-}
-
 .main {
 
     background-image: url("images/image 1.png");
@@ -105,6 +113,15 @@ header p {
     padding: auto;
 
 }
+
+#madlibs {
+
+    width: 1200px;
+    height: 750px;
+    text-align: left;
+
+}
+
 
 body {
 
@@ -121,7 +138,7 @@ body {
 
     text-align: center;
     margin: auto;
-    padding: 30px;
+    padding: auto;
     fill: none;
 }
 
@@ -134,7 +151,7 @@ label {
 }
 
 input {
-    fill: none ;
+    fill: none;
     border: none;
     border-bottom: 2px solid rgb(49, 0, 0);
     margin-bottom: 8px;
@@ -144,26 +161,84 @@ input {
 #professors {
 
     margin: 10px;
-    padding: 20px;
 }
 
 #profchoice {
 
-margin: 40px;
+    margin: 20px;
 
 }
 
 #submit {
-margin-top: 20px;
-padding: 8px;
-border: none;
+    margin-top: 20px;
+    padding: 8px;
+    border: none;
 
 }
 
 #submit:hover {
 
-background-color: #424242;
-color: white;
-transition-duration: 0.75s;
+    background-color: #424242;
+    color: white;
+    transition-duration: 0.75s;
+
+}
+
+#icons {
+    z-index: 100;
+
+}
+
+#snape:hover {
+
+    transform: scaleX(130%);
+    transform: scaleY(130%);
+    transition-duration: 1s;
+
+}
+
+#dumb:hover {
+
+    transform: rotateZ(360deg);
+    transition-duration: 2s;
+
+
+}
+
+#hag:hover {
+
+    animation: hagrid 3s infinite;
+
+}
+
+@keyframes hagrid {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(50px);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    75% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#madlibs p {
+
+    padding: auto;
+    margin: auto;
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+
 
 }
