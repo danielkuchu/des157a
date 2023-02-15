@@ -7,6 +7,11 @@
     const play = document.getElementById("play");
     const myForm = document.querySelector('#myForm');
     const madlibs = document.querySelector('#madlibs');
+    const icons = document.querySelector("#icons");
+    const dumb = document.getElementById("dumb");
+    const snape = document.getElementById("snape");
+    const hag = document.getElementById("hag");
+
     console.log(myForm);
 
 
@@ -42,10 +47,26 @@
         slowly and immediately recognize where I am. I transported to ${place}! 
         Excitement fills my body and I am unable to resist the urge to emote. Suddenly, my body takes over and I begin to ${dance}.</p>`;
 
-        madlibs.innerHTML= myText;
+        madlibs.innerHTML = myText;
+
+        if (profs === "snape") {
+
+            madlibs.dumb.innerHTML = "";
+            madlibs.hag.innerHTML = "";
+
+
+        } else if (profs === "dumb") {
+
+            madlibs.snape.innerHTML = "";
+            madlibs.hag.innerHTML = "";
+        } else if (profs === "hag") {
+
+            madlibs.dumb.innerHTML = "";
+            madlibs.snape.innerHTML = "";
+
+        }
 
     });
-
 
 
 

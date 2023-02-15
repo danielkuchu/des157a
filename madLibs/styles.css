@@ -26,6 +26,7 @@ header h2 {
     font: bold;
     border: none;
     margin-bottom: 30px;
+    border-radius: 5px;
 
 
 }
@@ -34,6 +35,7 @@ header h2 {
 
     background-color: #e67a16;
     transition-duration: 0.75s;
+    transform: scale(50px);
     border: none;
 }
 
@@ -111,6 +113,7 @@ header h2 {
     background-size: cover;
     margin: auto;
     padding: auto;
+    display: flex;
 
 }
 
@@ -138,7 +141,7 @@ body {
 
     text-align: center;
     margin: auto;
-    padding: auto;
+    padding-top:60px;
     fill: none;
 }
 
@@ -185,7 +188,10 @@ input {
 }
 
 #icons {
+    padding-top: 60px;
+    padding-left: 200px;
     z-index: 100;
+    float:right;
 
 }
 
@@ -238,7 +244,7 @@ input {
     padding: auto;
     margin: auto;
     font-family: 'Tangerine', cursive;
-    font-size: 30px;
+    font-size: 20px;
 
 
 }
