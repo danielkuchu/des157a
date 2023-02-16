@@ -32,39 +32,52 @@ text-align: center;
 
 .container {
     width: 1200px;
-    height: 720px;
     background-color: rgb(97, 47, 14);
     margin: auto;
     padding: auto;
 }
 
 
-#st-box {
+#book1 {
     width: 1000px;
     height: 200px;
     background-color: rgb(255, 157, 157);
     border: solid black;
     margin: auto;
     padding: auto;
+    border-radius: 20px;
 }
 
-#nd-box {
+#book2 {
     width: 1000px;
     height: 200px;
     background-color: rgb(77, 148, 255);
     border: solid black;
     margin: auto;
     padding: auto;
+    border-radius: 20px;
 }
 
-#rd-box {
+#book3 {
     width: 1000px;
     height: 200px;
     background-color: rgb(211, 125, 28);
     border: solid black;
     margin: auto;
     padding: auto;
+    border-radius: 20px;
 }
+
+#book4 {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(28, 211, 40);
+    border: solid black;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+}
+
 
 
 body {
