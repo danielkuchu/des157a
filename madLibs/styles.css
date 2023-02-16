@@ -176,6 +176,7 @@ input {
     margin-top: 20px;
     padding: 8px;
     border: none;
+    border-radius: 5px;
 
 }
 
@@ -241,10 +242,10 @@ input {
 
 #madlibs p {
 
-    padding: auto;
+   padding: 150px;
     margin: auto;
     font-family: 'Tangerine', cursive;
-    font-size: 20px;
+    font-size: 30px;
 
 
 }
