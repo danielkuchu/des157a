@@ -3,6 +3,19 @@ header {
     text-align: center;
     margin-bottom: 50px;
     padding: auto;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+header h1 {
+
+animation: blink 1s steps(4, start) infinite;
+}
+
+@keyframes blink {
+    
+to { visibility: hidden }
 
 }
 
@@ -12,7 +25,7 @@ body {
 
     margin: auto;
     padding: auto;
-    background-color: rgb(58, 101, 193);
+    background-color: rgb(67, 211, 255);
 
 
 }
@@ -22,7 +35,7 @@ body {
     margin: auto;
     padding: auto;
     max-width: 1200px;
-    height: 800px;
+    height: 900px;
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     box-shadow: 3px 3px 23px #888888;
@@ -30,6 +43,86 @@ body {
     flex-direction: column;
     justify-content: flex-end;
 
+}
+
+#floor {
+
+height:250px;
+background-color: antiquewhite;
+position: relative;
+
+}
+
+#eggside {
+
+transform: translateY(-200px);
+position: absolute;
+
+}
+
+#egg {
+
+transform: translate(150px, -120px);
+
+}
+
+#profside {
+
+    position: relative;
+left: 400px;
+top:-100px;
+transform: scale(180%);
+animation: up 2s infinite;
+
+
+}
+
+@keyframes up {
+
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+
+    
+}
+
+
+/* #arm {
+
+animation: armMove 1s infinite;
+transition-duration: 3s;
+
+} */
+
+/* @keyframes armMove {
+    
+0% {transform: rotateZ(0deg);}
+50% {transform: rotateZ(10deg)}
+100% {transform: rotateZ(23deg)}
+50% {transform: rotateZ(-10deg)}
+0% {transform: rotateZ(0deg)}
+
+} */
+
+
+#tableside {
+
+z-index: 5;
+float: right;
+position: relative;
+transform: translate(-50px,-300px);
+
+}
+
+#balls {
+
+transform: translate(50px, -200px);
+
+}
+
+#balls img {
+
+padding-right: 20px;
 }
 
 #textbox {
@@ -42,13 +135,21 @@ body {
     text-align: left;
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
+    z-index: 5;
 
+
+}
+
+#textbox p {
+
+    padding: auto;
+    margin: auto;
+line-height: 50px;
 
 }
 
 #next {
 
-    float: right;
     font-family: 'Press Start 2P', cursive;
     font-family: 'Roboto', sans-serif;
     padding: 10px;
@@ -73,6 +174,7 @@ footer a {
 padding: 80px;
     text-decoration: none;
     color: black;
-    font-size: 40px;
+    font-size:15px;
+    font-family: 'Press Start 2P', cursive;
 
 }
