@@ -125,6 +125,20 @@ transform: translate(50px, -200px);
 padding-right: 20px;
 }
 
+/* #ball1:hover {
+
+animation: rattle 1s infinite;
+
+}
+
+@keyframes rattle{
+
+    0% {transform: rotateZ('0deg');}
+    50% {transform: rotateZ('40deg');}
+    100% {transform: rotateZ('0px');}
+
+} */
+
 #textbox {
 
     padding: 100px;
