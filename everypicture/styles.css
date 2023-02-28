@@ -5,12 +5,14 @@ header {
     padding: auto;
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 230, 0);
 
 }
 
 header h1 {
 
 animation: blink 1s steps(4, start) infinite;
+
 }
 
 @keyframes blink {
@@ -25,7 +27,7 @@ body {
 
     margin: auto;
     padding: auto;
-    background-color: rgb(67, 211, 255);
+    background-color: rgb(0, 0, 0);
 
 
 }
@@ -38,7 +40,7 @@ body {
     height: 900px;
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
-    box-shadow: 3px 3px 23px #888888;
+    box-shadow: 3px 3px 23px 1px #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -63,6 +65,21 @@ position: absolute;
 #egg {
 
 transform: translate(150px, -120px);
+
+}
+
+#egg:hover {
+
+scale:110%;
+transition-duration: 1s;
+
+}
+
+@keyframes shake {
+
+    0% {transform: rotateZ(0deg);}
+    50% {transform: rotateZ(45deg);}
+    100% {transform: rotateZ(0deg);}
 
 }
 
@@ -104,6 +121,26 @@ transition-duration: 3s;
 
 } */
 
+#ball1:hover {
+
+scale: 120%;
+transition-duration: 1s;
+
+}
+
+#ball2:hover {
+
+    scale: 120%;
+    transition-duration: 1s;
+    
+    }
+
+    #ball3:hover {
+
+        scale: 120%;
+        transition-duration: 1s;
+        
+        }
 
 #tableside {
 
@@ -187,7 +224,7 @@ footer {
 footer a {
 padding: 80px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 230, 0);
     font-size:15px;
     font-family: 'Press Start 2P', cursive;
 
