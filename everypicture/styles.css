@@ -74,6 +74,7 @@ body {
 
     scale: 110%;
     transition-duration: 1s;
+    cursor: pointer;
 
 }
 
@@ -100,6 +101,12 @@ body {
     top: -100px;
     transform: scale(180%);
     animation: up 2s infinite;
+
+}
+
+#profside:hover {
+
+    cursor: pointer;
 
 }
 
@@ -299,6 +306,7 @@ transition-duration: 3s;
 
     scale: 120%;
     transition-duration: 1s;
+    cursor: pointer;
 
 }
 
@@ -306,6 +314,7 @@ transition-duration: 3s;
 
     scale: 120%;
     transition-duration: 1s;
+    cursor: pointer;
 
 }
 
@@ -313,6 +322,7 @@ transition-duration: 3s;
 
     scale: 120%;
     transition-duration: 1s;
+    cursor: pointer;
 
 }
 
@@ -388,6 +398,12 @@ animation: rattle 1s infinite;
     box-shadow: 1px 1px 5px #888888;
     font-family: 'Press Start 2P', cursive;
     background-color: #ffffff;
+}
+
+#next:hover {
+
+    cursor: pointer;
+
 }
 
 #back {
