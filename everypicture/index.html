@@ -41,20 +41,79 @@
 
 
     <main id="container">
+        <!-- Overlays v  -->
 
-        <!-- <section id="overlay" class="hiddenBall1">
+        <!-- Hidden charmander overlay -->
+        <section id="overlayBall1" class="hide">
             <article>
-                <h2>Overlay content here</h2>
-                <img src="http://placekitten.com/g/300/300" alt="kitten">
-                <button class="close">close</button>
+                <button class="close">X</button>
+                <h2>Charmander</h2>
+                <img src="images/char.png" width="187" height="172" alt="Charmander, the fire-breathing Pokemon"
+                    class="open">
+                <p>Attack: 12</p><br>
+                <p>Defense: 3</p><br>
+                <p>Swag: 15</p>
             </article>
-        </section> -->
+        </section>
 
+        <!-- Hidden Squirtle overlay -->
+        <section id="overlayBall2" class="hide">
+            <article>
+                <button class="close">X</button>
+                <h2>Squirtle</h2>
+                <img src="images/squirtle.png" width="115" height="174" alt="Spuirtle, the water turtle Pokemon"
+                    class="open">
+                <p>Attack: 8</p><br>
+                <p>Defense: 13</p><br>
+                <p>Swag: 10</p>
+            </article>
+        </section>
+
+        <!-- Hidden Bulbasaur overlay -->
+        <section id="overlayBall3" class="hide">
+            <article>
+                <button class="close">X</button>
+                <h2>Bulbasaur</h2>
+                <img src="images/bulb.png" width="105" height="120" alt="Bulbasaur, the grass type Pokemon"
+                    class="open">
+                <p>Attack: 5</p><br>
+                <p>Defense: 5</p><br>
+                <p>Swag: -1</p>
+            </article>
+        </section>
+
+        <!-- Hidden Professor overlay -->
+        <section id="overlayProf" class="hide">
+            <article>
+                <button class="close">X</button>
+                <h2>Professor B. Aldman</h2>
+                <img src="images/profhead.png" width="155" height="161" alt="Professor Baldie, lead Pokemon researcher"
+                    class="open">
+                <p>Attack: 5</p>
+            </article>
+        </section>
+
+         <!-- Hidden Professor overlay -->
+         <section id="overlayEgg" class="hide">
+            <article>
+                <button class="close">X</button>
+                <h2>Professor B. Aldman</h2>
+                <img src="images/eggover.png" width="167" height="199" alt="Rare Pokemon Egg"
+                    class="open">
+                <p>Attack: 5</p>
+            </article>
+        </section>
+
+
+
+
+
+        <!-- Overlays^  -->
 
         <div id="floor">
 
             <article id="eggside">
-                <img src="images/Egg.png" width="87" height="104" alt="Pokemon Egg" id="egg" class="prof">
+                <img src="images/Egg.png" width="87" height="104" alt="Pokemon Egg" id="egg" class="prof" class="open">
                 <img src="images/incubator.png" width="220" height="302" alt="Pokemon Egg Incubator">
 
             </article>
@@ -63,7 +122,8 @@
 
                 <!-- <img src="images/arm.png" width="122" height="86" alt="Prof's Arm" id="arm">
         <img src="images/prof.png" width="207" height="305" alt="Professor Baldie" id="prof"> -->
-                <img src="images/proffull.png" width="305" height="305" alt="Professor Baldie" id="prof" class="prof">
+                <img src="images/proffull.png" width="305" height="305" alt="Professor Baldie" id="prof" class="prof"
+                    class="open">
 
             </article>
 
@@ -73,12 +133,12 @@
 
                 <section id="balls">
 
-                    <p><a href=""><img src="images/pokeball.png" width="71" height="73" alt="Pokeball Choice 1" id="ball1"
-                        class="ball1"></a></p>
-                    <img src="images/pokeball2.png" width="71" height="73" alt="Pokeball Choice 2" id="ball2"
-                        class="ball2">
-                    <img src="images/pokeball3.png" width="71" height="73" alt="Pokeball Choice 3" id="ball3"
-                        class="ball3">
+                    <p><a href=""><img src="images/pokeball.png" width="71" height="73" alt="Pokeball Choice 1"
+                                id="ball1" class="ball1"></a></p>
+                    <p><a><img src="images/pokeball2.png" width="71" height="73" alt="Pokeball Choice 2" id="ball2"
+                                class="ball2"></a></p>
+                    <p><a><img src="images/pokeball3.png" width="71" height="73" alt="Pokeball Choice 3" id="ball3"
+                                class="ball3"></a></p>
 
                 </section>
             </article>

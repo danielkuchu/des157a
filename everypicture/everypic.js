@@ -1,10 +1,13 @@
-(function(){
+(function () {
 
     "use strict";
     console.log("JS is running faster than the offspring of Forrest Gump and Usain Bolt.");
-
+//variables
     const hotSpots = document.querySelectorAll("#main article");
     const theImg = document.querySelector("article img");
+    const openBtns = document.querySelectorAll(".open");
+    const closeBtns = document.querySelectorAll(".close");
+
 
     hotSpots.forEach(function (eachSpot) {
 
@@ -27,7 +30,7 @@
 
         }
 
-        hotSpots.forEach(function(eachSpot){
+        hotSpots.forEach(function (eachSpot) {
 
             eachSpot.addEventListener("mouseover", zoomPhoto);
             eachSpot.addEventListener("mouseout", function () {
@@ -38,18 +41,137 @@
 
         });
 
-   } 
+    }
 
-   //overlays
-   
-   document.querySelector(".open").addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector("#overlay").className = "showing";
+    //overlays
 
-});
-document.querySelector(".closed").addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector("#overlay").className = "hidden";});
+    //ball 1 overlay
+    document.querySelector("#ball1").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall1").className = "show";
+
+    });
+
+    //ball 2 overlay
+    document.querySelector("#ball2").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall2").className = "show";
+
+    });
+
+    //ball3 overlay
+    document.querySelector("#ball3").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall3").className = "show";
+
+    });
+
+    //prof overlay
+    document.querySelector("#prof").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayProf").className = "show";
+
+    });
+
+    //egg overlay
+    document.querySelector("#egg").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayEgg").className = "show";
+
+    });
+
+    // closing overlays
+    
+    //closing ball 1
+    document.querySelector(".close").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall1").className = "hide";
+
+
+    });
+
+    //closing ball 2
+    document.querySelector(".close").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall2").className = "hide";
+
+    });
+
+    //closing ball 3
+    document.querySelector(".close").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayBall3").className = "hide";
+
+    });
+
+
+    //closing Prof
+    document.querySelector(".close").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayProf").className = "hide";
+
+    });
+
+    //closing Egg
+    document.querySelector(".close").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("overlayEgg").className = "hide";
+
+    });
+
+//     for (const eachBtn of openBtns){
+// eachBtn.addEventListener("click", function(event){
+
+//     event.preventDefault();
+//     const thisBtn = event.target.id;
+//     document.getElementById(`ol-${thisBtn}`).className= "overlay show";
+
+// });
+//     }
+
+//     for (const eachBtn of closeBtns){
+//         eachBtn.addEventListener("click", function(event){
+        
+//             event.preventDefault();
+//             document.querySelector(".show").className= "overlay hidden";
+        
+//         });
+//             }
+
+
+
+//             //closing overlay with escape key
+
+            document.addEventListener("keydown", function(event){
+
+if (event.key === "Escape") {
+
+    document.querySelector(".show").className="hide";
+
+}
+
+            });
+
+    //next button
+
+    const textbox = document.getElementsByTagName("p");
+
+    document.querySelector("#next").addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        textbox.innerHTML = "fuck u"
+
+    });
+
+    //    document.querySelector(".open").addEventListener("click", function (event) {
+    //     event.preventDefault();
+    //     document.querySelector("#overlay").className = "showing";
+
+    // });
+    // document.querySelector(".closed").addEventListener("click", function (event) {
+    //     event.preventDefault();
+    //     document.querySelector("#overlay").className = "hidden";});
 
 
 })();

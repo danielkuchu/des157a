@@ -11,13 +11,15 @@ header {
 
 header h1 {
 
-animation: blink 1s steps(4, start) infinite;
+    animation: blink 1s steps(4, start) infinite;
 
 }
 
 @keyframes blink {
-    
-to { visibility: hidden }
+
+    to {
+        visibility: hidden
+    }
 
 }
 
@@ -49,58 +51,73 @@ body {
 
 #floor {
 
-height:250px;
-background-color: antiquewhite;
-position: relative;
+    height: 250px;
+    background-color: antiquewhite;
+    position: relative;
 
 }
 
 #eggside {
 
-transform: translateY(-200px);
-position: absolute;
+    transform: translateY(-200px);
+    position: absolute;
 
 }
 
 #egg {
 
-transform: translate(150px, -120px);
+    transform: translate(150px, -120px);
 
 }
 
 #egg:hover {
 
-scale:110%;
-transition-duration: 1s;
+    scale: 110%;
+    transition-duration: 1s;
 
 }
 
 @keyframes shake {
 
-    0% {transform: rotateZ(0deg);}
-    50% {transform: rotateZ(45deg);}
-    100% {transform: rotateZ(0deg);}
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(45deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
 
 }
 
 #profside {
 
     position: relative;
-left: 400px;
-top:-100px;
-transform: scale(180%);
-animation: up 2s infinite;
-
+    left: 400px;
+    top: -100px;
+    transform: scale(180%);
+    animation: up 2s infinite;
 
 }
 
 @keyframes up {
 
-    0% {transform: translateY(0px);}
-    50% {transform: translateY(10px);}
-    100% {transform: translateY(0px);}
+    0% {
+        transform: translateY(0px);
+    }
 
-    
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+
 }
 
 
@@ -121,10 +138,94 @@ transition-duration: 3s;
 
 } */
 
+
+/* Pokeball images and animations */
+/* Overlays baby */
+
+
+#overlayBall1,
+#overlayBall2,
+#overlayBall3 {
+
+    background-image: url(images/overlay.png);
+    background-size: cover;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 50%;
+    left: 50%;
+    width: 466px;
+    height: 531px;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 100;
+}
+
+   
+#overlayBall1,
+#overlayBall2,
+#overlayBall3 article {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 466px;
+    height: 531px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 100;
+}
+
+#overlayBall1,
+#overlayBall2,
+#overlayBall3 article p {
+
+    padding-bottom: 40px;
+
+}
+
+#overlayEgg {
+
+    background-image: url(images/overlay.png);
+    background-size: cover;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 50%;
+    left: 50%;
+    width: 466px;
+    height: 531px;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 100;
+    text-align: center;
+
+}
+
+#overlayProf {
+
+    background-image: url(images/overlay.png);
+    background-size: cover;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 50%;
+    left: 50%;
+    width: 466px;
+    height: 531px;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 100;
+    text-align: center;
+
+}
+
+
 #ball1:hover {
 
-scale: 120%;
-transition-duration: 1s;
+    scale: 120%;
+    transition-duration: 1s;
 
 }
 
@@ -132,34 +233,39 @@ transition-duration: 1s;
 
     scale: 120%;
     transition-duration: 1s;
-    
-    }
-
-    #ball3:hover {
-
-        scale: 120%;
-        transition-duration: 1s;
-        
-        }
-
-#tableside {
-
-z-index: 5;
-float: right;
-position: relative;
-transform: translate(-50px,-300px);
 
 }
 
-#balls {
+#ball3:hover {
 
-transform: translate(50px, -200px);
+    scale: 120%;
+    transition-duration: 1s;
+
+}
+
+#tableside {
+
+    z-index: 5;
+    float: right;
+    position: relative;
+    transform: translate(-50px, -300px);
+
+}
+
+#tableside p a {
+
+    float: right;
+    transform: translateX(-75px);
+}
+
+#balls {
+    transform: translate(50px, -200px);
 
 }
 
 #balls img {
 
-padding-right: 20px;
+    padding-right: 20px;
 }
 
 /* #ball1:hover {
@@ -195,7 +301,7 @@ animation: rattle 1s infinite;
 
     padding: auto;
     margin: auto;
-line-height: 50px;
+    line-height: 50px;
 
 }
 
@@ -222,10 +328,20 @@ footer {
 }
 
 footer a {
-padding: 80px;
+    padding: 80px;
     text-decoration: none;
     color: rgb(255, 230, 0);
-    font-size:15px;
+    font-size: 15px;
     font-family: 'Press Start 2P', cursive;
 
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
 }
