@@ -144,8 +144,7 @@ transition-duration: 3s;
 
 
 #overlayBall1,
-#overlayBall2,
-#overlayBall3 {
+#overlayBall2 {
 
     background-image: url(images/overlay.png);
     background-size: cover;
@@ -161,10 +160,39 @@ transition-duration: 3s;
     z-index: 100;
 }
 
+#overlayBall3 {
+
+    background-image: url(images/overlay.png);
+    background-size: cover;
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: auto;
+    margin: auto;
+    transform: translateY(200px);
+    width: 466px;
+    height: 531px;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 100;
+
+}
+
+#overlayBall3 article {
+
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    width: 466px;
+    height: 531px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 100;
+}
+
    
 #overlayBall1,
-#overlayBall2,
-#overlayBall3 article {
+#overlayBall2 {
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
@@ -185,14 +213,21 @@ transition-duration: 3s;
 
 }
 
+/* overlay egg image */
+#ovegg {
+
+animation: shake 1s infinite;
+transition-delay: 0ms;
+
+}
+
 #overlayEgg {
 
     background-image: url(images/overlay.png);
     background-size: cover;
     position: absolute;
     /* background-color: rgba(0, 0, 0, 0.5); */
-    top: 50%;
-    left: 50%;
+    transform: translate(50%, -50%);
     width: 466px;
     height: 531px;
     transition-property: opacity, visibility;
@@ -200,6 +235,29 @@ transition-duration: 3s;
     transition-timing-function: ease;
     z-index: 100;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+#overlayEgg,#overlayProf h2 {
+
+    font-size: 20px;
+
+}
+
+#overlayEgg, #overlayProf p {
+
+    font-size: 13px;
+    padding-top: 20px;
+
+}
+
+@keyframes shake{
+
+0% { transform: rotateZ(0deg); }
+25% { transform: rotateZ(-10deg); }
+50% { transform: rotateZ(10deg); }
+100% { transform: rotateZ(0deg); }
 
 }
 
@@ -218,6 +276,7 @@ transition-duration: 3s;
     transition-timing-function: ease;
     z-index: 100;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -313,7 +372,22 @@ animation: rattle 1s infinite;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 5px #888888;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffffff;
 }
+
+#back {
+
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888888;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffffff;
+}
+
 
 
 

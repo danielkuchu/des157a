@@ -3,45 +3,45 @@
     "use strict";
     console.log("JS is running faster than the offspring of Forrest Gump and Usain Bolt.");
 //variables
-    const hotSpots = document.querySelectorAll("#main article");
-    const theImg = document.querySelector("article img");
-    const openBtns = document.querySelectorAll(".open");
-    const closeBtns = document.querySelectorAll(".close");
+    // const hotSpots = document.querySelectorAll("#main article");
+    // const theImg = document.querySelector("article img");
+    // const openBtns = document.querySelectorAll(".open");
+    // const closeBtns = document.querySelectorAll(".close");
 
 
-    hotSpots.forEach(function (eachSpot) {
+    // hotSpots.forEach(function (eachSpot) {
 
-        eachSpot.addEventListener("mouseover", zoomPhoto);
+    //     eachSpot.addEventListener("mouseover", zoomPhoto);
 
-    });
+    // });
 
-    function zoomPhoto(event) {
+    // function zoomPhoto(event) {
 
-        const thisCorner = event.target.id;
-        console.log(thisCorner);
+    //     const thisCorner = event.target.id;
+    //     console.log(thisCorner);
 
-        switch (thisCorner) {
+    //     switch (thisCorner) {
 
-            case "egg": theImg.className = "egg"; break;
-            case "prof": theImg.className = "prof"; break;
-            case "ball1": theImg.className = "ball1"; break;
-            case "ball2": theImg.className = "ball2"; break;
-            case "ball3": theImg.className = "ball3"; break;
+    //         case "egg": theImg.className = "egg"; break;
+    //         case "prof": theImg.className = "prof"; break;
+    //         case "ball1": theImg.className = "ball1"; break;
+    //         case "ball2": theImg.className = "ball2"; break;
+    //         case "ball3": theImg.className = "ball3"; break;
 
-        }
+    //     }
 
-        hotSpots.forEach(function (eachSpot) {
+    //     hotSpots.forEach(function (eachSpot) {
 
-            eachSpot.addEventListener("mouseover", zoomPhoto);
-            eachSpot.addEventListener("mouseout", function () {
+    //         eachSpot.addEventListener("mouseover", zoomPhoto);
+    //         eachSpot.addEventListener("mouseout", function () {
 
-                theImg.className = "start";
+    //             theImg.className = "start";
 
-            });
+    //         });
 
-        });
+    //     });
 
-    }
+    // }
 
     //overlays
 
@@ -154,15 +154,37 @@ if (event.key === "Escape") {
 
     //next button
 
-    const textbox = document.getElementsByTagName("p");
-
     document.querySelector("#next").addEventListener("click", function (event) {
 
         event.preventDefault();
 
-        textbox.innerHTML = "fuck u"
+        document.getElementById("text").innerHTML=`Press esc if you're having trouble exiting the overlays.. My creator sucks at JS.. <button id="back">Return</button>`;
 
     });
+
+
+    // Attempting to reset textbox
+
+    document.querySelector("#back").addEventListener("click", function(){
+
+
+window.alert("Just refresh the page, this guy doesn't know how to make a return button LOL");
+
+
+    });
+
+    //Music
+
+    function playMusic() {
+        console.log("Music has started");
+        const audio = new Audio("pokesong.mp3");
+        audio.play();
+
+    }
+
+playMusic();
+
+    
 
     //    document.querySelector(".open").addEventListener("click", function (event) {
     //     event.preventDefault();
