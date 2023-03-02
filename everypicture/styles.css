@@ -190,7 +190,7 @@ transition-duration: 3s;
     z-index: 100;
 }
 
-   
+
 #overlayBall1,
 #overlayBall2 {
     text-align: center;
@@ -216,8 +216,9 @@ transition-duration: 3s;
 /* overlay egg image */
 #ovegg {
 
-animation: shake 1s infinite;
-transition-delay: 0ms;
+    padding-bottom: 40px;
+    animation: shake 1s infinite;
+    transition-delay: 0ms;
 
 }
 
@@ -239,25 +240,38 @@ transition-delay: 0ms;
 
 }
 
-#overlayEgg,#overlayProf h2 {
+#overlayEgg,
+#overlayProf h2 {
 
     font-size: 20px;
 
 }
 
-#overlayEgg, #overlayProf p {
+#overlayEgg,
+#overlayProf p {
 
     font-size: 13px;
     padding-top: 20px;
 
 }
 
-@keyframes shake{
+@keyframes shake {
 
-0% { transform: rotateZ(0deg); }
-25% { transform: rotateZ(-10deg); }
-50% { transform: rotateZ(10deg); }
-100% { transform: rotateZ(0deg); }
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    50% {
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
 
 }
 
