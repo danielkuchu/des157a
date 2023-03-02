@@ -78,6 +78,16 @@ text-align: center;
     border-radius: 20px;
 }
 
+#book5 {
+    width: 1000px;
+    height: 200px;
+    background-color: rgb(187, 0, 228);
+    border: solid black;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+}
+
 
 
 body {
