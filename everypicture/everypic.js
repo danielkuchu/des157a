@@ -83,41 +83,45 @@
     // closing overlays
     
     //closing ball 1
-    document.querySelector(".close").addEventListener("click", function (event) {
-        event.preventDefault();
+    document.querySelector("#overlayBall1 button").addEventListener("click", function (event) {
+        // event.preventDefault();
+        console.log("Closing Ball 1"); //overlayBall1
         document.getElementById("overlayBall1").className = "hide";
 
 
     });
 
     //closing ball 2
-    document.querySelector(".close").addEventListener("click", function (event) {
-        event.preventDefault();
+    document.querySelector("#overlayBall2 button").addEventListener("click", function (event) {
+        // event.preventDefault();
+        console.log("Closing ball 2");
         document.getElementById("overlayBall2").className = "hide";
 
     });
 
     //closing ball 3
-    document.querySelector(".close").addEventListener("click", function (event) {
-        event.preventDefault();
+    document.querySelector("#overlayBall3 button").addEventListener("click", function (event) {
+        // event.preventDefault();
         document.getElementById("overlayBall3").className = "hide";
 
     });
 
 
-    //closing Prof
-    document.querySelector(".close").addEventListener("click", function (event) {
-        event.preventDefault();
+    // //closing Prof
+    document.querySelector("#overlayProf button").addEventListener("click", function (event) {
+        // event.preventDefault();
         document.getElementById("overlayProf").className = "hide";
 
     });
 
-    //closing Egg
-    document.querySelector(".close").addEventListener("click", function (event) {
-        event.preventDefault();
+    // //closing Egg
+    document.querySelector("#overlayEgg button").addEventListener("click", function (event) {
+        // event.preventDefault();
         document.getElementById("overlayEgg").className = "hide";
 
     });
+
+
 
 //     for (const eachBtn of openBtns){
 // eachBtn.addEventListener("click", function(event){
@@ -158,31 +162,31 @@ if (event.key === "Escape") {
 
         event.preventDefault();
 
-        document.getElementById("text").innerHTML=`Press esc if you're having trouble exiting the overlays.. My creator sucks at JS.. <button id="back">Return</button>`;
+        document.getElementById("text").innerHTML=`I may be old and have poor vision, but you don't seem to be looking around. Keep looking! <button id="back">Return</button>`;
 
     });
 
 
     // Attempting to reset textbox
 
-    document.querySelector("#back").addEventListener("click", function(){
+//     document.querySelector("#back").addEventListener("click", function(){
 
 
-window.alert("Just refresh the page, this guy doesn't know how to make a return button LOL");
+// window.alert("Just refresh the page, this guy doesn't know how to make a return button LOL");
 
 
-    });
+//     });
 
     //Music
 
-    function playMusic() {
-        console.log("Music has started");
-        const audio = new Audio("pokesong.mp3");
-        audio.play();
+//     function playMusic() {
+//         console.log("Music has started");
+//         const audio = new Audio("pokesong.mp3");
+//         audio.play();
 
-    }
+//     }
 
-playMusic();
+// playMusic();
 
     
 
