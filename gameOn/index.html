@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+
     <title>Game On!</title>
 </head>
 
@@ -24,13 +33,30 @@
 
     <main id="container">
 
+        <img src="images/cloud.png" width="500" height="140" alt="Fluffy cloud" id="cloud1">
+        <img src="images/cloud.png" width="400" height="200" alt="Fluffy cloud" id="cloud2">
+
         <div id="gamecontrol">
-            <h2>Start a Game</h2>
-            <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
+
+            <div id="title">
+            <img src="images/pokeball.png" width="56" height="56" alt="pokeball decoration">
+            <h2>Pokemon Battle</h2>
+            <img src="images/pokeball.png" width="56" height="56" alt="pokeball decoration">
+        
+        </div>
+
+            <button id="startgame">BEGIN</button>
+
         </div>
         <div id="game"></div>
         <div id="actions"></div>
         <div id="score"></div>
+        <div id="grassflat"></div>
+        <section id="greenfloor">
+            <img src="images/grass1.png" width="358" height="200" alt="Wild grass 1" id="bush1">
+            <img src="images/grass2.png" width="358" height="200" alt="Wild grass 2" id="bush2">
+            <img src="images/grass2.png" width="358" height="140" alt="Wild grass 3" id="bush3">
+        </section>
 
     </main>
 

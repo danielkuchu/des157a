@@ -5,17 +5,192 @@ header {
 
 }
 
+#title {
+
+display: flex;
+font-size: 50px;
+font-family: 'Press Start 2P', cursive;
+z-index: 5;
+
+}
+
+
+
+#cloud1 {
+
+    position: relative;
+    left: 80%;
+    animation: side2side2 60s infinite;
+
+}
+
+#cloud2 {
+
+
+    position: relative;
+    bottom: 10%;
+    right: 10%;
+    animation: side2side 60s infinite;
+    transition-delay: none;
+
+}
+
+@keyframes side2side {
+
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(1000px, 0px); }
+        100%   { transform: translate(0, 0px); }   
+
+}
+
+@keyframes side2side2 {
+
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(-1000px, 0px); }
+    100%   { transform: translate(0, 0px); }   
+
+}
+
+
+    @keyframes shake {
+
+        0% { transform: translate(0,  0px); }
+        25%  { transform: translate(-5px, 0px); }
+    50%  { transform: translate(-10px, 0px); }
+    75%   { transform: translate(5px, 0px); }   
+    100%   { transform: translate(0px, 0px); }   
+
+    
+    }
+
 #container {
 
     margin: auto;
     padding: auto;
     max-width: 1200px;
     height: 900px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 204, 255);
     border-radius: 50px;
     box-shadow: 3px 3px 23px 1px #767676;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
 
+}
+
+
+#startgame {
+
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #00b2be;
+    font-family: 'Press Start 2P', cursive;
+    animation: blink 1s steps(4, start) infinite;
+
+}
+
+#startgame:hover {
+
+animation: none;
+cursor: pointer;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+}
+
+@keyframes blink {
+
+    to {
+        visibility: hidden
+    }
+
+}
+
+#gamecontrol {
+
+    position: relative;
+    bottom: 20%;
+    z-index: 5;
+    margin: auto;
+    padding: auto;
+
+}
+
+#bush1 {
+
+    position: relative;
+    bottom: 50%;
+    float: left;
+
+}
+
+#bush2 {
+
+    position: relative;
+    bottom: 30%;
+    float: right;
+
+}
+
+#bush3 {
+
+    position: relative;
+    bottom: 50%;
+    float: right;
+
+}
+
+#bush1:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+#bush2:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+#bush3:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+#grassflat {
+
+    position: relative;
+    top: 5%;
+    height: 50px;
+    background-color: rgb(0, 153, 0);
+
+}
+
+#greenfloor {
+
+    background-color: rgb(0, 153, 0);
+    height: 250px;
+    border-radius: 50px;
+    z-index: 5;
+
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
 }
