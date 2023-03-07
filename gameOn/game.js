@@ -12,6 +12,8 @@ document.querySelector("#startgame").addEventListener("click",function(){
     document.getElementById("bush3").className="hide";
     document.getElementById("startgame").className="hide";
     document.getElementById("title").className="hide";
+    document.getElementById("page2").className="show";
+
 });
 
 })();
