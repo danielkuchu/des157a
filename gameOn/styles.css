@@ -7,61 +7,105 @@ header {
 
 #title {
 
-display: flex;
-font-size: 50px;
-font-family: 'Press Start 2P', cursive;
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    transform: translateY(-100px);
+
+}
+
+.balldec {
+
+padding: 50px;
+
+}
+
+#page1 h2 {
+
 z-index: 5;
+margin: auto;
+padding: auto;
+font-size: 60px;
 
 }
 
 
-
 #cloud1 {
 
-    position: relative;
-    left: 80%;
-    animation: side2side2 60s infinite;
+    position: absolute;
+    bottom: 85%;
+    left: 70%;
+    animation: side2side2 50s infinite;
 
 }
 
 #cloud2 {
 
 
-    position: relative;
-    bottom: 10%;
-    right: 10%;
-    animation: side2side 60s infinite;
+    position: absolute;
+    right: 65%;
+    bottom: 80%;
+    animation: side2side 50s infinite;
     transition-delay: none;
 
 }
 
 @keyframes side2side {
 
-        0% { transform: translate(0,  0px); }
-        50%  { transform: translate(1000px, 0px); }
-        100%   { transform: translate(0, 0px); }   
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(600px, 0px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
 
 }
 
 @keyframes side2side2 {
 
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(-1000px, 0px); }
-    100%   { transform: translate(0, 0px); }   
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(-1000px, 0px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
 
 }
 
 
-    @keyframes shake {
+@keyframes shake {
 
-        0% { transform: translate(0,  0px); }
-        25%  { transform: translate(-5px, 0px); }
-    50%  { transform: translate(-10px, 0px); }
-    75%   { transform: translate(5px, 0px); }   
-    100%   { transform: translate(0px, 0px); }   
-
-    
+    0% {
+        transform: translate(0, 0px);
     }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(-10px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+
+}
 
 #container {
 
@@ -76,12 +120,15 @@ z-index: 5;
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
+    z-index: -100;
 
 }
 
 
 #startgame {
 
+    position: relative;
+    bottom: 10%;
     text-align: center;
     padding: 20px;
     width: 200px;
@@ -97,10 +144,10 @@ z-index: 5;
 
 #startgame:hover {
 
-animation: none;
-cursor: pointer;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
+    animation: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 
 }
 
@@ -122,29 +169,37 @@ background-color: rgb(0, 0, 0);
 
 }
 
+/* Char's Bush */
 #bush1 {
 
     position: relative;
-    bottom: 50%;
-    float: left;
+    right: 40%;
+    z-index: 5;
 
 }
+
+/* Squirtle's Bush */
 
 #bush2 {
 
-    position: relative;
-    bottom: 30%;
-    float: right;
+    position: absolute;
+    right: 27%;
+    top: 60%;
+    z-index: 5;
 
 }
+
+/* Bulbasaur's Bush */
 
 #bush3 {
 
-    position: relative;
-    bottom: 50%;
-    float: right;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    z-index: 5;
 
 }
+/* has char */
 
 #bush1:hover {
 
@@ -153,6 +208,8 @@ background-color: rgb(0, 0, 0);
 
 }
 
+/* has squirtle */
+
 #bush2:hover {
 
     animation: shake 300ms infinite;
@@ -160,12 +217,82 @@ background-color: rgb(0, 0, 0);
 
 }
 
+/* has bulba */
+
 #bush3:hover {
 
     animation: shake 300ms infinite;
     cursor: pointer;
 
 }
+
+/* Pokemon for page 1 */
+
+#char {
+
+position: relative;
+right: 15%;
+z-index: -3;
+
+}
+
+#squirt {
+
+position: relative;
+right: 90%;
+transform: translateY(120px);
+
+}
+
+#bulb {
+
+    position: absolute;
+    bottom: 39%;
+    left: 49%;
+
+}
+
+/* Char */
+
+#bushA {
+
+transform: translate(0,-100px);
+
+}
+
+#bushB {
+
+position: absolute;
+top: 55%;
+left: 70%;
+z-index: 1;
+    
+    }
+
+/* Pokemon hover */
+
+/* #char:hover {
+
+transform: translate(0,-70px);
+    
+    }
+    
+    #squirt:hover {
+    
+    position: relative;
+    left: 25%;
+    transform: translateY(-210px);
+    z-index: -3;
+    
+    }
+    
+    #bulb:hover {
+    
+        position: absolute;
+        bottom: 39%;
+        left: 49%;
+    
+    } */
 
 #grassflat {
 
@@ -188,9 +315,9 @@ background-color: rgb(0, 0, 0);
 
 #page2 {
 
-position: relative;
-top: 30%;
-text-align: center;
+    position: relative;
+    top: 30%;
+    text-align: center;
 
 
 }
@@ -198,14 +325,14 @@ text-align: center;
 
 #page2 h2 {
 
-font-size: 30px;
-font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
 
 }
 
 #ballbutton {
-position: relative;
-top: 30%;
+    position: relative;
+    top: 30%;
     animation: blink 1s steps(4, start) infinite;
 
 
@@ -214,22 +341,22 @@ top: 30%;
 
 #choosePokemon {
 
-text-align: center;
-padding: 20px;
-width: 300px;
-border-radius: 10px;
-border-width: 5px;
-color: rgb(0, 0, 0);
-background-color: white;
-box-shadow: 3px 3px 23px 1px #00b2be;
-font-family: 'Press Start 2P', cursive;
-animation: blink 1s steps(4, start) infinite;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #00b2be;
+    font-family: 'Press Start 2P', cursive;
+    animation: blink 1s steps(4, start) infinite;
 
 }
 
 #page2 #choosePokemon:hover {
 
-cursor: pointer;
+    cursor: pointer;
 
 }
 
