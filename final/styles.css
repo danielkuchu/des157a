@@ -1,0 +1,60 @@
+body {
+
+    max-width: 1200px;
+    margin: auto;
+    padding: auto;
+
+}
+main {
+
+  
+
+}
+
+header {
+
+padding: 50px;
+text-align: center;
+
+}
+
+header p {
+
+font-size: 30px;
+
+}
+
+header h1 {
+
+font-size: 75px;
+
+}
+
+#summary {
+
+padding:100px;
+margin-bottom: 100px;
+border-radius: 20px;
+box-shadow: 3px 3px 5px 1px #888888;
+
+}
+
+#info {
+
+background-color: rgb(255, 255, 255);
+padding: 100px;
+border-radius: 20px;
+box-shadow: 3px 3px 5px 1px #888888;
+
+}
+
+#info p {
+
+padding-bottom: 50px;
+
+}
+
+footer {
+text-align: center;
+
+}
