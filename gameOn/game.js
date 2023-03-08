@@ -9,15 +9,16 @@
 
     const startGame = document.getElementById('startgame');
     const gameControl = document.getElementById('gamecontrol');
-    const game = document.getElementById('game');
     const score = document.getElementById('score');
-    const actionArea = document.getElementById('actions');
+    const textbox = document.getElementsByTagName('texbox p');
+    let health = document.getElementById("health");
+    health.value -= 50;
 
     //
 
     document.querySelector("#startgame").addEventListener("click", function () {
 
-        document.getElementById("page1").className= "hide";
+        document.getElementById("page1").className = "hide";
         document.getElementById("page2").className = "show";
 
     });
@@ -51,8 +52,8 @@
     });
 
     function setUpTurn() {
-        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-        actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+        textbox.innerHTML = `<p>Roll for an attack, ${gameData.players[gameData.index]}</p>`;
+    //    textbox.innerHTML = '<button id="roll">Roll the Dice</button>';
         document.getElementById('roll').addEventListener('click', function () {
 
             throwDice();
@@ -123,10 +124,10 @@
         }
     }
 
-    function showCurrentScore() {
-        score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}
-    ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
-    ${gameData.score[1]}</strong></p>`;
-    }
+    // function showCurrentScore() {
+    //     score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}
+    // ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
+    // ${gameData.score[1]}</strong></p>`;
+    // }
 
 })();

@@ -329,6 +329,17 @@ transform: translate(0,-70px);
     font-family: 'Press Start 2P', cursive;
 
 }
+
+
+
+/* #health2 {
+
+    background-color: green;
+    width: 250px;
+    
+    } */
+
+
 #pokemon {
 
 
@@ -347,6 +358,21 @@ transform: translateY(100px);
     position: absolute;
     right: 10%;
     transform: translateY(100px);
+}
+
+#health {
+
+background-color: rgb(0, 255, 0);
+width: 400px;
+position: absolute;
+left: 60%;
+transform: translateY(-100px);
+
+}
+
+#pikaside {
+
+float: right;
 }
 
 #textbox {
