@@ -14,7 +14,7 @@
     let health = document.getElementById("health");
     health.value -= 50;
 
-    //
+    //Starting screen to page 2
 
     document.querySelector("#startgame").addEventListener("click", function () {
 
@@ -27,11 +27,16 @@
 
     const gameData = {
 
-        players: ['player 1', 'player 2'],
+        players: ['Charmander', 'Pikachu'],
         score: [100, 100],
         messages: [
-            "message1",
-            "message2",
+            "`${gameData.players[gameData.index]} used a weak attack! `", // -10 hp
+            "`${gameData.players[gameData.index]} used a strong attack!`", // -25 hp
+            "`${gameData.players[gameData.index]} got scared and soiled themself! Turn skipped.`", // Turn skipped
+            "`${gameData.players[gameData.index]} tapped into their secret steroid stash! HP slightly restored`", //+10 hp
+            "`${gameData.players[gameData.index]} charged up for a game-ending attack!.. But it missed.`", // Turn skipped -- no effect
+            "`${gameData.players[gameData.index]} feels a little shy... Turn skipped`", // Turn skipped
+            "`${gameData.players[gameData.index]} got confused and attacked themself!`", // -5 hp
 
         ],
         roll: 0,
@@ -65,7 +70,7 @@
         actionArea.innerHTML = '';
         gameData.roll = Math.floor(Math.random() * 7) + 1; //using ceil could result in a zero
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-        game.innerHTML += `<img src="${gameData.dice[gameData.roll1 - 1]}"> `; // detting inner green bar to the width (player's health)
+        game.innerHTML += `<img src="${gameData.dice[gameData.roll - 1]}"> `; // detting inner green bar to the width (player's health)
         // if (gameData.index == 0){ 
         // bar.style.width= `${gameData.score[gameData.index]}px`;
 
