@@ -36,23 +36,35 @@
 
 
         <div id="rulesOverlay" class="hide">
-
-            <h2>Pokemon Battle Rules</h2>
+            <button id="closeOverlay">exit</button>
+            <h2>How to play:</h2>
             <ul>
 
-               <li>
-                A
-               </li>
-               <li>
-                b
-               </li>
-               <li>
-                c
-               </li>
-               <li>
-                d
-               </li>
-                
+                <li>
+                    You are randomly assigned a pokemon after you click "begin."
+                </li>
+                <li>
+                    From there, the first turn will be randomly assigned to Pikachu or Charmander, player 1 and player
+                    2.
+                </li>
+                <li>
+                    There are 7 outcomes from clicking the roll button:
+                    <ol>
+                        <li>Weak attack (<strong class="r">-10 HP</strong>)</li>
+                        <li>Strong attack (<strong class="r">-25 HP</strong>)</li>
+                        <li>Player got scared (<strong>turn skipped</strong>)</li>
+                        <li>Player used steroids (<strong class="g">+ 10 HP</strong>)</li>
+                        <li>Attack missed (<strong>turn skipped</strong>)</li>
+                        <li>Player feeling shy (<strong>turn skipped</strong>)</li>
+                        <li> Player got confused and attacked themselves (<strong class="r">-15 HP</strong>)</li>
+
+                    </ol>
+                </li>
+
+                <li>
+                    Each player starts with 100 HP. First player to reach 0 HP loses. Happy battling!
+                </li>
+
             </ul>
 
         </div>
@@ -63,15 +75,16 @@
             <!-- <progress id="health2" value="100" max="100"></progress> -->
             <div id="pokemon">
                 <section id="charside">
-
+                    <label id="charlabel">Charmander</label>
+                    <progress id="health1" value="100" max="100"></progress>
                     <img src="images/charside.png" width="260" height="260" alt="Charmander" id="char2">
 
                 </section>
 
                 <section id="pikaside">
 
-                    <label>Pikachu</label>
-                    <progress id="health" value="100" max="100"></progress>
+                    <label id="pikalabel">Pikachu</label>
+                    <progress id="health1" value="100" max="100"></progress>
                     <img src="images/pika.png" width="277" height="222" alt="Pikachu" id="pika">
 
                 </section>
@@ -80,17 +93,11 @@
             <section id="textbox">
 
                 <button id="roll">roll</button>
-                <p>NOJDAJFBJAGJKVKJJK AKWFKJAFBKESKVBSEBLK AVKSK V AVKVA K</p>
+                <div id="gamecontrol"></div>
 
             </section>
 
         </div>
-
-        <div id="gamecontrol"></div>
-
-        <!--From Pig code-->
-        <div id="actions"></div>
-        <div id="score"></div>
 
         <!--Starting Page-->
         <div id="page1">
@@ -137,14 +144,14 @@
         </div>
     </main>
 
-
-
     <footer>
 
-        <h2 id="rules">rules</h2>
+        <button id="rules">Game Rules</button>
         <p>Made with swag by Daniel Ramos</p>
 
     </footer>
+
+
 </body>
 
 </html>

@@ -15,16 +15,59 @@ header {
 
 .balldec {
 
-padding: 50px;
+    padding: 50px;
+
+}
+
+#rulesOverlay {
+
+    position: absolute;
+    right: 25%;
+    transform: translateY(200px);
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    padding: 100px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 50;
+
+
+}
+
+#rulesOverlay ol li {
+
+color: yellow;
+
+}
+
+.g {
+
+color: green;
+
+}
+
+.r {
+
+    color: red;
+}
+
+
+#rulesOverlay ul li {
+
+padding-bottom: 50px;
 
 }
 
 #page1 h2 {
 
-z-index: 5;
-margin: auto;
-padding: auto;
-font-size: 60px;
+    z-index: 5;
+    margin: auto;
+    padding: auto;
+    font-size: 60px;
 
 }
 
@@ -32,7 +75,7 @@ font-size: 60px;
 #cloud1 {
 
     position: absolute;
-    bottom: 85%;
+    bottom: 90%;
     left: 70%;
     animation: side2side2 50s infinite;
 
@@ -43,7 +86,7 @@ font-size: 60px;
 
     position: absolute;
     right: 65%;
-    bottom: 80%;
+    bottom: 85%;
     animation: side2side 50s infinite;
     transition-delay: none;
 
@@ -110,7 +153,7 @@ font-size: 60px;
 #container {
 
     margin: auto;
-    padding: auto;
+    width: 1200px;
     max-width: 1200px;
     height: 900px;
     background-color: rgb(0, 204, 255);
@@ -119,7 +162,6 @@ font-size: 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-align: center;
     z-index: -100;
 
 }
@@ -129,6 +171,7 @@ font-size: 60px;
 
     position: relative;
     bottom: 30%;
+    left: 40%;
     text-align: center;
     padding: 20px;
     width: 200px;
@@ -173,7 +216,7 @@ font-size: 60px;
 #bush1 {
 
     position: relative;
-    right: 40%;
+    right: 15%;
     z-index: 5;
 
 }
@@ -199,6 +242,7 @@ font-size: 60px;
     z-index: 5;
 
 }
+
 /* has char */
 
 #bush1:hover {
@@ -230,17 +274,17 @@ font-size: 60px;
 
 #char {
 
-position: relative;
-right: 15%;
-z-index: -3;
+    position: relative;
+    left: 10%;
+    z-index: -3;
 
 }
 
 #squirt {
 
-position: relative;
-right: 90%;
-transform: translateY(120px);
+    position: relative;
+    right: 90%;
+    transform: translateY(120px);
 
 }
 
@@ -256,18 +300,18 @@ transform: translateY(120px);
 
 #bushA {
 
-transform: translate(0,-100px);
+    transform: translate(0, -100px);
 
 }
 
 #bushB {
 
-position: absolute;
-top: 55%;
-left: 70%;
-z-index: 1;
-    
-    }
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    z-index: 1;
+
+}
 
 /* Pokemon hover */
 
@@ -346,40 +390,88 @@ transform: translate(0,-70px);
     max-width: 1200px;
 }
 
+#charlabel {
+
+    position: absolute;
+    left: 5%;
+    transform: translateY(-350px);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+
+}
+
 #char2 {
 
-position: absolute;
-left: 10%;
-transform: translateY(100px);
+    position: absolute;
+    left: 10%;
+    transform: translateY(-150px);
+}
+
+#health2 {
+
+    background-color: rgb(0, 255, 0);
+    width: 400px;
+    position: absolute;
+    left: 10%;
+    transform: translateY(-300px);
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    z-index: 1;
+
+}
+
+#pikalabel {
+
+    position: absolute;
+    left: 78%;
+    transform: translateY(-350px);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+
+
 }
 
 #pika {
 
     position: absolute;
     right: 10%;
-    transform: translateY(100px);
+    transform: translateY(-150px);
 }
 
-#health {
+#health1 {
 
-background-color: rgb(0, 255, 0);
-width: 400px;
-position: absolute;
-left: 60%;
-transform: translateY(-100px);
+    background-color: rgb(0, 255, 0);
+    width: 400px;
+    position: absolute;
+    left: 60%;
+    transform: translateY(-300px);
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    z-index: 1;
 
 }
+
 
 #pikaside {
 
-float: right;
+    float: right;
+
+}
+
+#roll {
+
+padding: 20px;
+border-radius: 20px;
+
 }
 
 #textbox {
-position: absolute;
-transform: translateY(400px);
-    padding: 100px;
-    height: 50px;
+    position: absolute;
+    transform: translateY(150px);
+    height: 200px;
+    width: 1200px;
     background-color: rgb(255, 255, 255);
     border-style: solid;
     border-radius: 20px;
@@ -389,6 +481,11 @@ transform: translateY(400px);
     z-index: 5;
 
 
+}
+
+#gamecontrol {
+
+    text-align: center;
 }
 
 
@@ -410,6 +507,43 @@ transform: translateY(400px);
 #page2 #choosePokemon:hover {
 
     cursor: pointer;
+
+}
+
+footer {
+background-color: #ffffff00;
+text-align: center;
+margin: auto;
+padding: 100px;
+width: 1200px;
+height: 100px;
+
+}
+
+footer p {
+
+font-size: 20px;
+
+}
+
+#rules {
+
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #a0a0a0;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+#rules:hover {
+
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 
 }
 
