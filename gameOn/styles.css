@@ -237,7 +237,7 @@ padding-bottom: 50px;
 #bush3 {
 
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 42%;
     z-index: 5;
 
@@ -290,8 +290,8 @@ padding-bottom: 50px;
 
 #bulb {
 
-    position: absolute;
-    bottom: 39%;
+    position: relative;
+    transform: translateY(-350px);
     left: 49%;
 
 }
