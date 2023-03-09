@@ -14,7 +14,7 @@
     const rules = document.querySelector("#rules");
     const ruleLay = document.querySelector("#rulesOverlay");
     const closeRules = document.querySelector("#closeOverlay");
-    let healthBar1 = document.getElementById("health1");
+    let healthBar1 = document.querySelector("#health1");
 
     //Starting screen to page 2
 
@@ -50,13 +50,13 @@
         players: ['Charmander', 'Pikachu'],
         score: [100, 100],
         messages: [
-            "`${gameData.players[gameData.index]} used a weak attack! `", // -10 hp
-            "`${gameData.players[gameData.index]} used a strong attack!`", // -25 hp
-            "`${gameData.players[gameData.index]} got scared and soiled themself! Turn skipped.`", // Turn skipped
-            "`${gameData.players[gameData.index]} tapped into their secret steroid stash! HP slightly restored`", //+10 hp
-            "`${gameData.players[gameData.index]} charged up for a game-ending attack!.. But it missed.`", // Turn skipped -- no effect
-            "`${gameData.players[gameData.index]} feels a little shy... Turn skipped`", // Turn skipped
-            "`${gameData.players[gameData.index]} got confused and attacked themself!`", // -15 hp
+            "You used a weak attack! ", // -10 hp
+            "You used a strong attack!`", // -25 hp
+            "You got scared and your pokemon soiled themself! Turn skipped.", // Turn skipped
+            "You tapped into your secret steroid stash! HP slightly restored", //+10 hp
+            "You charged up for a game-ending attack!.. But you missed.", // Turn skipped -- no effect
+            "You're feeling a little shy... Turn skipped", // Turn skipped
+            "Your pokemon got confused and attacked themself!", // -15 hp
 
         ],
         roll: 0,
@@ -73,13 +73,10 @@
         setTimeout(setUpTurn, 2000);
 
 
-
-        setUpTurn();
     });
 
     function setUpTurn() {
-        gameControl.innerHTML = `<p>Roll for an attack, ${gameData.players[gameData.index]}</p>`;
-        //    textbox.innerHTML = '<button id="roll">Roll the Dice</button>';
+        gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
         roll.addEventListener('click', function () {
 
             throwDice();
@@ -89,21 +86,20 @@
 
     function throwDice() {
         gameData.roll = Math.floor(Math.random() * 7) + 1; //using ceil could result in a zero
-        gameControl.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+        
+        gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
         // setting inner green bar to the width (player's health)
         // if (gameData.index == 0){ 
         // bar.style.width= `${gameData.score[gameData.index]}px`;
 
         // } else { }
 
-        ;
-
 
         // if 1 is rolled... Weak Attack
         if (gameData.roll === 0) {
 
             healthBar1.value -= 10;
-            gameData.messages[gameData.index]=0;
+            gameData.messages[0];
             setTimeout(setUpTurn, 2000);
         }
 
