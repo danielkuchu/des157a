@@ -40,12 +40,23 @@ background-color: rgb(255, 255, 255);
 padding: 100px;
 border-radius: 20px;
 box-shadow: 3px 3px 5px 1px #888888;
+margin-bottom: 100px;
 
 }
 
 #info p {
 
 padding-bottom: 50px;
+
+}
+
+#comp {
+
+    background-color: rgb(255, 255, 255);
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px 1px #888888;
+    text-align: center;
 
 }
 
