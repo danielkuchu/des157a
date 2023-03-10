@@ -547,6 +547,49 @@ font-size: 20px;
 
 }
 
+.outer {
+
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+
+
+}
+
+.inner {
+
+position: absolute;
+background-color: green;
+left:0;
+top: 0;
+height: 30px;
+width: 100%;
+}
+
+/* pika's */
+
+#healthBar2 {
+
+    position: absolute;
+    transform: translateY(-300px);
+    right: 10%;
+    
+    
+    }
+
+    /* char's */
+
+#healthBar1 {
+
+position: absolute;
+transform: translateY(-300px);
+left: 20px;
+
+
+}
+
 
 .hide {
     visibility: hidden;
