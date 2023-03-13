@@ -7,15 +7,16 @@
     // bar1 done, bar2, text done, and roll button done, begin button done
 
 
-    const startGame = document.getElementById('startgame');
-    const roll = document.getElementById("roll");
-    const gameControl = document.getElementById('gamecontrol');
-    const textbox = document.getElementById('texbox');
-    const rules = document.querySelector("#rules");
-    const ruleLay = document.querySelector("#rulesOverlay");
-    const closeRules = document.querySelector("#closeOverlay");
-    let healthBar1 = document.querySelector("#healthBar1 .inner");
-    let healthBar2 = document.querySelector("#healthBar2 .inner");
+    const startGame = document.getElementById('startgame'); // "begin" button on start page
+    const roll = document.getElementById("roll"); // roll button
+    const gameControl = document.getElementById('gamecontrol'); // where text is displayed and where roll button sits
+    const rules = document.querySelector("#rules"); // rules button
+    const ruleLay = document.querySelector("#rulesOverlay"); // rules overlay display
+    const closeRules = document.querySelector("#closeOverlay"); //closing the rules
+    let healthBar1 = document.querySelector("#healthBar1 .inner"); //Charmander's healthbar
+    let healthBar2 = document.querySelector("#healthBar2 .inner"); //Pikachu's healthbar
+
+
     //Starting screen to page 2
 
     startGame.addEventListener("click", function () {
@@ -42,21 +43,23 @@
         ruleLay.className = "hide";
     });
 
-    //change object
+    //Game Data
 
     const gameData = {
 
+
+        // how do I apply effects to the healthbar1/healthbar2 + messages to the textbox simultaneously
         players: ['Charmander', 'Pikachu'],
         score: [100, 100],
-        effects: [-10, -25, 0, 10, 0, -15],
+        effects: [-15, -35, -5, 5, -4, 0, -15], // [score] - 10??
         messages: [
-            "You used a weak attack! ", // -10 hp
-            "You used a strong attack!`", // -25 hp
-            "You got scared and your pokemon soiled themself! Turn skipped.", // Turn skipped
-            "You tapped into your secret steroid stash! HP slightly restored", //+10 hp
-            "You charged up for a game-ending attack!.. But you missed.", // Turn skipped -- no effect
-            "You're feeling a little shy... Turn skipped", // Turn skipped
-            "Your pokemon got confused and attacked themself!", // -15 hp
+            "You used a weak attack! ", // [1] -10 hp
+            "You used a strong attack!`", //[2] -25 hp
+            "You made the other Pokemon soil themself!", // [3] -5hp
+            "The enemy tapped into your secret steroid stash! HP slightly restored", // [4] +5 hp
+            "You charged up for a game-ending attack!.. But you missed.", // [5] Turn skipped
+            "You're feeling a little shy... Turn skipped", // [6] Turn skipped
+            "Your pokemon got confused the other player and they attacked themself!", // [7] -15 hp
 
         ],
         roll: 0,
@@ -67,135 +70,119 @@
 
     startGame.addEventListener('click', function () {
         gameData.index = Math.round(Math.random());
-        console.log(gameData.index);
-        gameControl.innerHTML = '<h2>The Game Has Started</h2>';
-        setTimeout(setUpTurn, 2000);
-
+        gameControl.innerHTML = '<h2>The Battle is Beginning</h2>';
+        setTimeout(setUpTurn, 4000);
 
     });
 
     function setUpTurn() {
+        gameData.index = Math.round(Math.random());
         gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
-        roll.addEventListener('click', function () {
 
-            throwDice();
-
-        });
     }
+
+
+    // Correct Placement? 
+    //Roll action + calling to outcomes
+
+    roll.addEventListener('click', function () {
+
+        throwDice();
+
+    });
+
 
     function throwDice() {
-        gameData.roll = Math.floor(Math.random() * 7) + 1; //using ceil could result in a zero
+        const attack = Math.floor(Math.random() * 7); //using ceil could result in a zero
 
-        gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
-        // setting inner green bar to the width (player's health)
-        // if (gameData.index == 0){ 
-        // bar.style.width= `${gameData.score[gameData.index]}px`;
-
-        // } else { }
 
         //setting/switching player
+        // addding to max score will be problem
 
-        if (gameData.players == 0) {
+        // set progress bar to overflow hidden
 
-            gameData.score[1]= gameData.score[1] + gameData.effects;
-            healthBar2.style.width = "";
-
-        } else {
-
-            gameData.score[0]= gameData.score[0] + gameData.effects;
-            healthBar1.style.width = "";
-
-        }
-
-        gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-
-
-        // if 1 is rolled... Weak Attack
         if (gameData.index == 0) {
-            gameData.score= gameData.score + gameData.effects[0];
-            gameData.messages[gameData.index] = gameData.messages[0];
-            healthBar2.style.width = healthBar2.width - "10px";
-            // gameControl.messages[0];
-            setTimeout(setUpTurn, 2000);
-        }
 
-        // if 2 is rolled... Strong Attack
-        else if (gameData.index == 1) {
-            gameData.score= gameData.score + gameData.effects[1];
-            gameData.messages[gameData.index] = gameData.messages[1];
-            // gameControl.messages[1];
-            setTimeout(setUpTurn, 2000);
-        }
+            gameData.score[1] = gameData.score[1] + gameData.effects[attack];
+            gameControl.innerHTML = gameData.messages[attack]; //use css to cover up roll button
+            if (gameData.score[1] < 1) {
 
-        // If 3 is rolled, turn skipped
+                gameControl.innerHTML = `<h3>Charmander has won the battle!</h3>`;
+                healthBar2.style.width = `0%`;
 
-        else if (gameData.roll === 2) {
-            gameData.score= gameData.score + gameData.effects[2];
-            gameData.messages[gameData.index] = gameData.messages[2];
-            setTimeout(setUpTurn, 2000);
-        }
+            } else {
 
-        //if 4 is rolled... +10 hp
+                healthBar2.style.width = `${gameData.score[1]}%`;
+                gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 
-        else if (gameData.roll === 3) {
-            gameData.score= gameData.score + gameData.effects[3];
-            gameData.messages[gameData.index] = gameData.messages[3];
-            // gameData.messages[gameData.index] = 3;
-            setTimeout(setUpTurn, 2000);
-        }
-
-        //if 5 is rolled... turn is skipped
+                setTimeout(function () {
+                    gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
+                }, 3500);
 
 
-        else if (gameData.roll === 4) {
-            gameData.score= gameData.score + gameData.effects[4];
-            gameData.messages[gameData.index] = gameData.messages[4];
-            // gameData.messages[gameData.index] = 4;
-            setTimeout(setUpTurn, 2000);
-        }
-
-        //if 6 is rolled... turn is skipped
-
-        else if (gameData.roll === 5) {
-            gameData.score= gameData.score + gameData.effects[5];
-            gameData.messages[gameData.index] = gameData.messages[5];
-            // gameData.messages[gameData.index] = 5;
-            setTimeout(setUpTurn, 2000);
-        }
+            }
 
 
-        //if 7 is rolled, user damages self -15 hp
-        else if (gameData.roll === 6) {
-            gameData.score= gameData.score + gameData.effects[6];
-            gameData.messages[gameData.index] = gameData.messages[6];
-            // gameData.messages[gameData.index] = 6;
-            setTimeout(setUpTurn, 2000);
-        }
-
-        else {
-
-            checkLosingCondition();
-        }
-
-    }
-
-    function checkLosingCondition() {
-        // if (gameData.score[gameData.index] < gameData.gameEnd) {
-        //     gameControl.innerHTML = `<h2>${gameData.players[gameData.index]} 
-        // has fainted!</h2>`;
-
-        //     document.getElementById('quit').innerHTML = 'Start a New Game?';
-        // }
-
-        if (gameData.players == 0) {
-
-            gameData.score[1]= gameData.score[1] + gameData.effects;
 
         } else {
 
-            gameData.score[0]= gameData.score[0] + gameData.effects;
+            gameData.score[0] = gameData.score[0] + gameData.effects[attack];
+            gameControl.innerHTML = gameData.messages[attack];
+            healthBar1.style.width = `${gameData.score[0]}%`;
+
+            if (gameData.score[0] < 1) {
+
+                gameControl.innerHTML = `<h3>Pikachu has won the battle!</h3>`;
+                healthBar1.style.width = `0%`;
+
+            } else {
+
+                healthBar1.style.width = `${gameData.score[0]}%`;
+                gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+
+                setTimeout(function () {
+                    gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
+                }, 3500);
+
+
+            }
 
         }
+
+        // checkLosingCondition();
+        // gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+
+        // setTimeout(function(){
+        //     gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
+        // }, 4000);
+
+
     }
+
+    // function checkLosingCondition() {
+
+    //     let winner = "";
+
+    //     if (gameData.index == 0) {
+
+    //         winner = "Charmander";
+
+
+    //         if (gameData.score[1] < 1) {
+    //             action.innerHTML = `<h3>${winner} has won the battle!</h3>`;
+    //         }
+    //     }
+
+
+    //     else if (gameData.index == 1) {
+    //         winner = "Pikachu";
+
+
+    //         if (gameData.score[0] < 1) {
+    //             action.innerHTML = `<h3>${winner} has won the battle!</h3>`;
+    //         }
+    //     }
+
+    // }
 
 })();

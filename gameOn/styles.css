@@ -464,6 +464,15 @@ transform: translate(0,-70px);
 
 padding: 20px;
 border-radius: 20px;
+position: relative;
+left: 45%;
+
+}
+
+#roll:hover {
+
+background-color: black;
+color: white;
 
 }
 
@@ -485,7 +494,9 @@ border-radius: 20px;
 
 #gamecontrol {
 
-    text-align: center;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 
@@ -574,7 +585,7 @@ width: 100%;
 
     position: absolute;
     transform: translateY(-300px);
-    right: 10%;
+    right: 6%;
     
     
     }
@@ -585,7 +596,7 @@ width: 100%;
 
 position: absolute;
 transform: translateY(-300px);
-left: 20px;
+left: 5%;
 
 
 }
