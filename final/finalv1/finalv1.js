@@ -7,6 +7,9 @@
     // bar1 done, bar2, text done, and roll button done, begin button done
 
 
+    const select = document.querySelector('#select'); // Select button transition to page 1
+    const selectSquirtle = document.querySelector("#squirtleBall"); //Select Squirtle Ball 1
+    const squirtleOverlay = document.querySelector("#squirtleOverlay"); // Squirtle Overlay
     const startGame = document.getElementById('startgame'); // "begin" button on start page
     const roll = document.getElementById("roll"); // roll button
     const gameControl = document.getElementById('gamecontrol'); // where text is displayed and where roll button sits
@@ -21,9 +24,23 @@
     //Sound Effects
 
     
+ // Transition to page 1
+
+select.addEventListener("click", function(){
+
+document.getElementById("page0").className = "hide";
+document.getElementById("page1").className = "show";
 
 
-    //Starting screen to page 2
+});
+
+selectSquirtle.addEventListener("click", function(){
+
+squirtleOverlay.className="show";
+
+});
+
+    //Transition to page 2
 
     startGame.addEventListener("click", function () {
 

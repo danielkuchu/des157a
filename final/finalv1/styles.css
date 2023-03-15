@@ -1,0 +1,644 @@
+header {
+
+    max-width: 1200px;
+    height: 100px;
+
+}
+
+#title {
+
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    transform: translateY(-200px);
+
+}
+
+.balldec {
+
+    padding: 50px;
+
+}
+
+#rulesOverlay {
+
+    position: absolute;
+    right: 25%;
+    transform: translateY(200px);
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    padding: 100px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 50;
+
+
+}
+
+#rulesOverlay ol li {
+
+color: yellow;
+
+}
+
+.g {
+
+color: green;
+
+}
+
+.r {
+
+    color: red;
+}
+
+
+#rulesOverlay ul li {
+
+padding-bottom: 50px;
+
+}
+
+#select {
+
+padding: 20px;
+z-index: 20;
+
+}
+
+#selectTable {
+
+position: absolute;
+flex-direction: row;
+margin: auto;
+padding: auto;
+
+}
+
+#selectBalls img{
+
+    position: relative;
+    padding-right: 50px;
+
+}
+
+#squirtleOverlay {
+position: absolute;
+right: 25%;
+top:20%;
+z-index: 50;
+
+padding: auto;
+
+}
+
+#selectSquirtle {
+
+position: absolute;
+top: 70%;
+right: 37%;
+
+}
+
+#selectSquirtle:hover {
+
+    opacity: .8;
+    cursor: pointer;
+}
+
+#squirtleBall:hover {
+
+cursor: pointer;
+
+}
+
+
+
+#page1 h2 {
+
+    z-index: 5;
+    margin: auto;
+    padding: auto;
+    font-size: 60px;
+
+}
+
+
+#cloud1 {
+
+    position: absolute;
+    bottom: 90%;
+    left: 70%;
+    animation: side2side2 50s infinite;
+
+}
+
+#cloud2 {
+
+
+    position: absolute;
+    right: 65%;
+    bottom: 85%;
+    animation: side2side 50s infinite;
+    transition-delay: none;
+
+}
+
+@keyframes side2side {
+
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(600px, 0px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
+
+}
+
+@keyframes side2side2 {
+
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(-1000px, 0px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
+
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(-10px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+
+}
+
+#container {
+
+    margin: auto;
+    width: 1200px;
+    max-width: 1200px;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 3px 3px 23px 1px #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: -100;
+
+}
+
+
+#startgame {
+
+    position: relative;
+    bottom: 30%;
+    left: 40%;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #00b2be;
+    font-family: 'Press Start 2P', cursive;
+    animation: blink 1s steps(4, start) infinite;
+
+}
+
+#startgame:hover {
+
+    animation: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+
+}
+
+@keyframes blink {
+
+    to {
+        visibility: hidden
+    }
+
+}
+
+#gamecontrol {
+
+    position: relative;
+    bottom: 20%;
+    z-index: 5;
+    margin: auto;
+    padding: auto;
+
+}
+
+/* Char's Bush */
+#bush1 {
+
+    position: relative;
+    right: 15%;
+    z-index: 5;
+
+}
+
+/* Squirtle's Bush */
+
+#bush2 {
+
+    position: absolute;
+    right: 27%;
+    top: 60%;
+    z-index: 5;
+
+}
+
+/* Bulbasaur's Bush */
+
+#bush3 {
+
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    z-index: 5;
+
+}
+
+/* has char */
+
+#bush1:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+/* has squirtle */
+
+#bush2:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+/* has bulba */
+
+#bush3:hover {
+
+    animation: shake 300ms infinite;
+    cursor: pointer;
+
+}
+
+/* Pokemon for page 1 */
+
+#char {
+
+    position: relative;
+    left: 10%;
+    z-index: -3;
+
+}
+
+#squirt {
+
+    position: relative;
+    right: 90%;
+    transform: translateY(120px);
+
+}
+
+#bulb {
+
+    position: relative;
+    transform: translateY(-350px);
+    left: 49%;
+
+}
+
+/* Char */
+
+#bushA {
+
+    transform: translate(0, -100px);
+
+}
+
+#bushB {
+
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    z-index: 1;
+
+}
+
+
+#grassflat {
+
+    position: relative;
+    top: 6%;
+    height: 50px;
+    padding: 50px;
+    background-color: rgb(0, 153, 0);
+
+}
+
+#greenfloor {
+
+    background-color: rgb(0, 153, 0);
+    height: 250px;
+    border-radius: 50px;
+    z-index: 5;
+
+}
+
+#page2 {
+
+    position: relative;
+    top: 30%;
+    text-align: center;
+
+
+}
+
+
+#page2 h2 {
+
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+
+
+/* #health2 {
+
+    background-color: green;
+    width: 250px;
+    
+    } */
+
+
+#pokemon {
+
+
+    max-width: 1200px;
+}
+
+#charlabel {
+
+    position: absolute;
+    left: 5%;
+    transform: translateY(-350px);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+
+}
+
+#char2 {
+
+    position: absolute;
+    left: 10%;
+    transform: translateY(-150px);
+}
+
+#health2 {
+
+    background-color: rgb(0, 255, 0);
+    width: 400px;
+    position: absolute;
+    left: 10%;
+    transform: translateY(-300px);
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    z-index: 1;
+
+}
+
+#pikalabel {
+
+    position: absolute;
+    left: 78%;
+    transform: translateY(-350px);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+
+
+}
+
+#pika {
+
+    position: absolute;
+    right: 10%;
+    transform: translateY(-150px);
+}
+
+#health1 {
+
+    background-color: rgb(0, 255, 0);
+    width: 400px;
+    position: absolute;
+    left: 60%;
+    transform: translateY(-300px);
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    z-index: 1;
+
+}
+
+
+#pikaside {
+
+    float: right;
+
+}
+
+#roll {
+
+padding: 20px;
+border-radius: 20px;
+position: relative;
+left: 45%;
+
+}
+
+#roll:hover {
+
+background-color: black;
+color: white;
+
+}
+
+#textbox {
+    position: absolute;
+    transform: translateY(150px);
+    height: 200px;
+    width: 1200px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 5;
+
+
+}
+
+#gamecontrol {
+
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+
+#choosePokemon {
+
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #00b2be;
+    font-family: 'Press Start 2P', cursive;
+    animation: blink 1s steps(4, start) infinite;
+
+}
+
+#page2 #choosePokemon:hover {
+
+    cursor: pointer;
+
+}
+
+footer {
+background-color: #ffffff00;
+text-align: center;
+margin: auto;
+padding: 100px;
+width: 1200px;
+height: 100px;
+
+}
+
+footer p {
+
+font-size: 20px;
+
+}
+
+#rules {
+
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 23px 1px #a0a0a0;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+#rules:hover {
+
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+
+}
+
+.outer {
+
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+
+
+}
+
+.inner {
+
+position: absolute;
+background-color: green;
+left:0;
+top: 0;
+height: 30px;
+width: 100%;
+}
+
+/* pika's */
+
+#healthBar2 {
+
+    position: absolute;
+    transform: translateY(-300px);
+    right: 6%;
+    
+    
+    }
+
+    /* char's */
+
+#healthBar1 {
+
+position: absolute;
+transform: translateY(-300px);
+left: 5%;
+
+
+}
+
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JS -->
-    <script src="game.js" defer></script>
+    <script src="finalv1.js" defer></script>
 
 
     <!-- CSS -->
@@ -69,31 +69,64 @@
 
         <!-- Pokemon Selection Page -->
 
-        
+        <div id="page0">
+
+            <section id="squirtleOverlay" class="hide">
+
+<img src="images/pickSquirtle.png" width="629" height="714" alt="Squirtle Selection Overlay">
+<img src="images/selectBtn.png" width="152" height="63" alt="Select Squirtle Button" id="selectSquirtle">
+
+            </section>
+
+            <!-- Pokeballs on table -->
+            <button id="select">Next Page</button>
+
+            <section id="selectTable">
+
+                <img src="images/page0table.png" width="900" height="351" alt="Pokemon table">
+
+                <div id="selectBalls">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 1" id="squirtleBall">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 2">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 3">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 4">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 5">
+                    <img src="images/pokeball.png" width="106" height="107" alt="Pokeball 6">
+                </div>
+
+            </section>
+
+        </div>
 
         <!-- Pokemon Fight Page -->
         <div id="page2" class="hide">
 
-            <!--Sound Effects-->
 
-            <audio autoplay loop id="pikapika" src="audio/pikachusound.mp3"></audio>
-
-            <!-- <progress id="health2" value="100" max="100"></progress> -->
             <div id="pokemon">
+
+
                 <section id="charside">
+
+
                     <label id="charlabel">Charmander</label>
-                    <!-- <progress id="health2" value="100" max="100"></progress> -->
-                    <div class="outer" id="healthBar1" value="100"><div class="inner"></div></div>
+                    <div class="outer" id="healthBar1" value="100">
+                        <div class="inner"></div>
+
+
+                    </div>
 
                     <img src="images/charside.png" width="260" height="260" alt="Charmander" id="char2">
 
                 </section>
 
+
                 <section id="pikaside">
 
+
                     <label id="pikalabel">Pikachu</label>
-                    <!-- <progress id="health1" value="100" max="100"></progress> -->
-                    <div class="outer" id="healthBar2" value="100"><div class="inner"></div></div>
+                    <div class="outer" id="healthBar2" value="100">
+                        <div class="inner"></div>
+                    </div>
                     <img src="images/pika.png" width="277" height="222" alt="Pikachu" id="pika">
                 </section>
             </div>
@@ -108,7 +141,7 @@
         </div>
 
         <!--Starting Page-->
-        <div id="page1">
+        <div id="page1" class="hide">
 
             <div id="title">
                 <img src="images/pokeball.png" width="56" height="56" alt="pokeball decoration" class="balldec">
