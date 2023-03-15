@@ -15,30 +15,41 @@
     const gameControl = document.getElementById('gamecontrol'); // where text is displayed and where roll button sits
     const rules = document.querySelector("#rules"); // rules button
     const ruleLay = document.querySelector("#rulesOverlay"); // rules overlay display
-    const closeRules = document.querySelector("#closeOverlay"); //closing the rules
+    const closeRules = document.querySelector("#closeOverlay"); //closing the 
+    const exitOverlay = document.querySelector(".exitOverlay"); // Closing Pokemon Overlays
+    const bush = document.querySelector(".bush"); // Bushes
     let healthBar1 = document.querySelector("#healthBar1 .inner"); //Charmander's healthbar
     let healthBar2 = document.querySelector("#healthBar2 .inner"); //Pikachu's healthbar
     let audioChar = new Audio("audio/charmandersound.mp3"); // Charmander Attack sound
-    let audioPika = new Audio("audio/pikachusound.mp3"); // Pikachu Attack sound
+    let audioPika = new Audio("audio/pikachusound.mp3"); // Pikachu Attack 
+    let audioSquirtle = new Audio("audio/squirtle.mp3"); // Squirtle sound
+    let audioBush = new Audio("audio/bushes.mp3");
 
     //Sound Effects
 
-    
- // Transition to page 1
 
-select.addEventListener("click", function(){
+    // Transition to page 1
 
-document.getElementById("page0").className = "hide";
-document.getElementById("page1").className = "show";
+    select.addEventListener("click", function () {
+
+        document.getElementById("page0").className = "hide";
+        document.getElementById("page1").className = "show";
 
 
-});
+    });
 
-selectSquirtle.addEventListener("click", function(){
+    selectSquirtle.addEventListener("click", function () {
 
-squirtleOverlay.className="show";
+        squirtleOverlay.className = "show";
+        audioSquirtle.play();
 
-});
+    });
+
+    exitOverlay.addEventListener("click", function () {
+
+        squirtleOverlay.className = "hide";
+
+    });
 
     //Transition to page 2
 
@@ -64,6 +75,22 @@ squirtleOverlay.className="show";
         event.preventDefault();
         console.log("Closing Rules Overlay");
         ruleLay.className = "hide";
+    });
+
+    //Bush Hover
+
+    bush.addEventListener("mouseover", function(){
+
+        audioBush.play();
+
+    });
+
+    //Bush Sound stop
+
+    bush.addEventListener("mouseoff", function(){
+
+    
+
     });
 
     //Game Data
@@ -171,41 +198,6 @@ squirtleOverlay.className="show";
             }
 
         }
-
-        // checkLosingCondition();
-        // gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-
-        // setTimeout(function(){
-        //     gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
-        // }, 4000);
-
-
     }
-
-    // function checkLosingCondition() {
-
-    //     let winner = "";
-
-    //     if (gameData.index == 0) {
-
-    //         winner = "Charmander";
-
-
-    //         if (gameData.score[1] < 1) {
-    //             action.innerHTML = `<h3>${winner} has won the battle!</h3>`;
-    //         }
-    //     }
-
-
-    //     else if (gameData.index == 1) {
-    //         winner = "Pikachu";
-
-
-    //         if (gameData.score[0] < 1) {
-    //             action.innerHTML = `<h3>${winner} has won the battle!</h3>`;
-    //         }
-    //     }
-
-    // }
 
 })();
