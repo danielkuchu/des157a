@@ -8,8 +8,23 @@
 
 
     const select = document.querySelector('#select'); // Select button transition to page 1
-    const selectSquirtle = document.querySelector("#squirtleBall"); //Select Squirtle Ball 1
+
+    const ballSquirtle = document.querySelector("#squirtleBall"); //Select Squirtle- Ball 1
+    const ballChar = document.querySelector("#charBall"); //Select Char - Ball 2
+    const ballBulb = document.querySelector("#bulbBall"); //Select Bulb - Ball 3 
+    const ballPika = document.querySelector("#pikaBall"); //Select Pika - Ball 4
+
     const squirtleOverlay = document.querySelector("#squirtleOverlay"); // Squirtle Overlay
+    const charOverlay = document.querySelector("#charOverlay"); // Charmander Overlay
+    const bulbOverlay = document.querySelector("#bulbOverlay"); // Bulbasaur Overlay
+    const pikaOverlay = document.querySelector("#pikaOverlay"); // Pikachu Overlay
+
+    const closeSquirtle = document.querySelector("#squirtleOverlay button");
+    const closeChar = document.querySelector("#charOverlay button");
+    const closeBulb = document.querySelector("#bulbOverlay button");
+    const closePika = document.querySelector("#pikaOverlay button");
+
+
     const startGame = document.getElementById('startgame'); // "begin" button on start page
     const roll = document.getElementById("roll"); // roll button
     const gameControl = document.getElementById('gamecontrol'); // where text is displayed and where roll button sits
@@ -20,8 +35,9 @@
     const bush = document.querySelector(".bush"); // Bushes
     let healthBar1 = document.querySelector("#healthBar1 .inner"); //Charmander's healthbar
     let healthBar2 = document.querySelector("#healthBar2 .inner"); //Pikachu's healthbar
-    let audioChar = new Audio("audio/charmandersound.mp3"); // Charmander Attack sound
+    let audioChar = new Audio("audio/charmandersound.wav"); // Charmander Attack sound
     let audioPika = new Audio("audio/pikachusound.mp3"); // Pikachu Attack 
+    let audioBulb = new Audio("audio/bulbasaur.mp3"); // Bulbasaur sound 
     let audioSquirtle = new Audio("audio/squirtle.mp3"); // Squirtle sound
     let audioBush = new Audio("audio/bushes.mp3");
 
@@ -38,16 +54,65 @@
 
     });
 
-    selectSquirtle.addEventListener("click", function () {
+    //Squirtle Overlay (Open + Close)
+
+    ballSquirtle.addEventListener("click", function () {
 
         squirtleOverlay.className = "show";
         audioSquirtle.play();
 
     });
 
-    exitOverlay.addEventListener("click", function () {
+    closeSquirtle.addEventListener("click", function () {
 
         squirtleOverlay.className = "hide";
+
+    });
+
+    //Charmander Overlay (Open + Close)
+
+    ballChar.addEventListener("click", function () {
+
+        charOverlay.className = "show"
+        audioChar.play();
+
+    });
+
+    closeChar.addEventListener("click", function () {
+
+        charOverlay.className = "hide";
+
+    });
+
+    //Bulbasaur Overlay (Open + Close)
+
+    ballBulb.addEventListener("click", function () {
+
+        bulbOverlay.className = "show";
+        audioBulb.play();
+        console.log("Bulbasaur Overlay");
+
+    });
+
+    closeBulb.addEventListener("click", function () {
+
+        bulbOverlay.className = "hide";
+
+    });
+
+    //Pikachu Overlay (Open + Close)
+
+    ballPika.addEventListener("click", function () {
+
+        pikaOverlay.className = "show";
+        audioPika.play();
+        console.log("Pikachu Overlay");
+
+    });
+
+    closePika.addEventListener("click", function () {
+
+        pikaOverlay.className = "hide";
 
     });
 
@@ -79,7 +144,7 @@
 
     //Bush Hover
 
-    bush.addEventListener("mouseover", function(){
+    bush.addEventListener("mouseover", function () {
 
         audioBush.play();
 
@@ -87,9 +152,9 @@
 
     //Bush Sound stop
 
-    bush.addEventListener("mouseoff", function(){
+    bush.addEventListener("mouseoff", function () {
 
-    
+
 
     });
 
@@ -97,9 +162,8 @@
 
     const gameData = {
 
-
-        // how do I apply effects to the healthbar1/healthbar2 + messages to the textbox simultaneously
-        players: ['Charmander', 'Pikachu'],
+        pokemon: ["Squirtle", "Charmander", "Bulbasaur", "Pikachu"],
+        players: ['Charmander', 'Pikachu'], //What do I change this to?
         score: [100, 100],
         effects: [-15, -35, -5, 5, -4, 0, -15], // [score] - 10??
         messages: [

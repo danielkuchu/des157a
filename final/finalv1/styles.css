@@ -46,13 +46,13 @@ header {
 
 #rulesOverlay ol li {
 
-color: yellow;
+    color: yellow;
 
 }
 
 .g {
 
-color: green;
+    color: green;
 
 }
 
@@ -64,21 +64,21 @@ color: green;
 
 #select {
 
-padding: 20px;
-z-index: 20;
+    padding: 20px;
+    z-index: 20;
 
 }
 
 #selectTable {
 
-position: absolute;
-flex-direction: row;
-margin: auto;
-padding: auto;
+    position: absolute;
+    flex-direction: row;
+    margin: auto;
+    padding: auto;
 
 }
 
-#selectBalls img{
+#selectBalls img {
 
     position: relative;
     padding-right: 50px;
@@ -87,39 +87,54 @@ padding: auto;
 
 #hearts {
 
-position: absolute;
-left: 48%;
-margin-top: 80px;
-animation: bob 3s infinite;
-transition-delay: none ;
+    position: absolute;
+    left: 48%;
+    margin-top: 80px;
+    animation: bob 3s infinite;
+    transition-delay: none;
 
 }
 
 @keyframes bob {
 
-0% {transform: translateY(0px);}
-25% {transform: translateY(-10px);}
-50% {transform: translateY(10px);}
-75% {transform: translateY(-10px);}
-100% {transform: translateY(0px);}
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 
 }
 
-#squirtleOverlay {
-position: absolute;
-right: 25%;
-top:20%;
-z-index: 50;
+/* Squirtle Overlay */
 
-padding: auto;
+#squirtleOverlay {
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    z-index: 50;
+    padding: auto;
 
 }
 
 #selectSquirtle {
 
-position: absolute;
-top: 70%;
-right: 37%;
+    position: absolute;
+    top: 70%;
+    right: 37%;
 
 }
 
@@ -129,9 +144,104 @@ right: 37%;
     cursor: pointer;
 }
 
+/* Charmander Overlay */
+
+#charOverlay {
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    z-index: 50;
+    padding: auto;
+
+}
+
+#selectChar {
+
+    position: absolute;
+    top: 70%;
+    right: 37%;
+
+}
+
+#selectChar:hover {
+
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Bulbasaur Overlay */
+
+#bulbOverlay {
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    z-index: 50;
+    padding: auto;
+
+}
+
+#selectBulb {
+
+    position: absolute;
+    top: 70%;
+    right: 37%;
+
+}
+
+#selectBulb:hover {
+
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Pikachu Overlay */
+
+#pikaOverlay {
+    position: absolute;
+    right: 25%;
+    top: 20%;
+    z-index: 50;
+    padding: auto;
+
+}
+
+#selectPika {
+
+    position: absolute;
+    top: 70%;
+    right: 37%;
+
+}
+
+#selectPika:hover {
+
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Pokeball Hovers */
+
 #squirtleBall:hover {
 
-cursor: pointer;
+    cursor: pointer;
+
+}
+
+#charBall:hover {
+
+    cursor: pointer;
+
+}
+
+#bulbBall:hover {
+
+    cursor: pointer;
+
+}
+
+#pikaBall:hover {
+
+    cursor: pointer;
 
 }
 
@@ -513,17 +623,17 @@ cursor: pointer;
 
 #roll {
 
-padding: 20px;
-border-radius: 20px;
-position: relative;
-left: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    left: 45%;
 
 }
 
 #roll:hover {
 
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
 
 }
 
@@ -573,18 +683,18 @@ color: white;
 }
 
 footer {
-background-color: #ffffff00;
-text-align: center;
-margin: auto;
-padding: 100px;
-width: 1200px;
-height: 100px;
+    background-color: #ffffff00;
+    text-align: center;
+    margin: auto;
+    padding: 100px;
+    width: 1200px;
+    height: 100px;
 
 }
 
 footer p {
 
-font-size: 20px;
+    font-size: 20px;
 
 }
 
@@ -623,14 +733,14 @@ font-size: 20px;
 
 .inner {
 
-position: absolute;
-background-color: green;
-left:0;
-top: 0;
-height: 30px;
-width: 100%;
-border-radius: 20px;
-overflow: hidden;
+    position: absolute;
+    background-color: green;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 /* pika's */
@@ -641,18 +751,18 @@ overflow: hidden;
     transform: translateY(-300px);
     right: 6%;
     border-radius: 20px;
-    
-    
-    }
 
-    /* char's */
+
+}
+
+/* char's */
 
 #healthBar1 {
 
-position: absolute;
-transform: translateY(-300px);
-left: 5%;
-border-radius: 20px;
+    position: absolute;
+    transform: translateY(-300px);
+    left: 5%;
+    border-radius: 20px;
 
 
 }
