@@ -46,7 +46,7 @@
                     2.
                 </li>
                 <li>
-                    There are 7 outcomes from clicking the roll button:
+                    There are 7 outcomes from clicking the Attack button:
                     <ol>
                         <li>Weak attack (<strong class="r">-10 HP</strong>)</li>
                         <li>Strong attack (<strong class="r">-25 HP</strong>)</li>
@@ -70,6 +70,7 @@
         <!-- Pokemon Selection Page -->
 
         <div id="page0">
+            <div id="displayP1"></div><h3>VS</h3><div id="displayP2"></div>
 
             <!-- Pokemon Selection Overlays -->
             <section id="squirtleOverlay" class="hide">
@@ -79,7 +80,7 @@
                 <img src="images/hearts.png" width="53" height="45" alt="hearts" id="hearts">
                 <img src="images/pickSquirtle.png" width="629" height="714" alt="Squirtle Selection Overlay">
                 <img src="images/selectBtn.png" width="152" height="63" alt="Select Squirtle Button"
-                    id="selectSquirtle">
+                    id="squirtle" class="selectBtn">
 
             </section>
 
@@ -89,7 +90,7 @@
 
                 <img src="images/charOverlay.png" width="629" height="714" alt= "Char Selection Overlay">
                 <img src="images/selectBtn.png" width="152" height="63" alt="Select Charmander Button"
-                    id="selectChar">
+                    id="charmander" class="selectBtn">
 
             </section>
 
@@ -99,7 +100,7 @@
 
                 <img src="images/bulbOverlay.png" width="629" height="714" alt="Bulbasaur Selection Overlay">
                 <img src="images/selectBtn.png" width="152" height="63" alt="Select Bulbasaur Button"
-                    id="selectBulb">
+                    id="bulbasaur" class="selectBtn">
 
             </section>
 
@@ -109,14 +110,13 @@
 
                 <img src="images/pikaOverlay.png" width="629" height="714" alt="Pikachu Selection Overlay">
                 <img src="images/selectBtn.png" width="152" height="63" alt="Select Pikachu Button"
-                    id="selectPika">
+                    id="pikachu" class="selectBtn">
 
             </section>
 
             
 
             <!-- Pokeballs on table -->
-            <button id="select">Next Page</button>
 
             <section id="selectTable">
 
@@ -142,27 +142,17 @@
 
                 <section id="charside">
 
+                    <div class="outer" id="healthBar1" value="100"><div class="inner"></div></div>
 
-                    <label id="charlabel">Charmander</label>
-                    <div class="outer" id="healthBar1" value="100">
-                        <div class="inner"></div>
-
-
-                    </div>
-
-                    <img src="images/charside.png" width="260" height="260" alt="Charmander" id="char2">
+                    <img src="images/charmander.png" width="260" height="260" alt="Charmander" id="poke1">
 
                 </section>
 
 
                 <section id="pikaside">
 
-
-                    <label id="pikalabel">Pikachu</label>
-                    <div class="outer" id="healthBar2" value="100">
-                        <div class="inner"></div>
-                    </div>
-                    <img src="images/pika.png" width="277" height="222" alt="Pikachu" id="pika">
+                    <div class="outer" id="healthBar2" value="100"><div class="inner"></div></div>
+                    <img src="images/pikachu.png" width="277" height="222" alt="Pikachu" id="poke2"> 
                 </section>
             </div>
 

@@ -67,13 +67,14 @@ header {
     padding: 20px;
     z-index: 20;
 
+
 }
 
 #selectTable {
 
     position: absolute;
-    flex-direction: row;
-    margin: auto;
+    margin-top: 750px;
+    margin-left: 150px;
     padding: auto;
 
 }
@@ -82,6 +83,9 @@ header {
 
     position: relative;
     padding-right: 50px;
+    transform: translateY(-400px);
+    left: 17%;
+    z-index: 30;
 
 }
 
@@ -118,6 +122,27 @@ header {
     }
 
 }
+/* Exit Overlay Button */
+
+.exitOverlay {
+
+position: absolute;
+right: 43%;
+padding: 12px;
+width: 100px;
+border-radius: 7px;
+border-width: 5px;
+font-size: 15px;
+font-family: 'Press Start 2P', cursive;
+
+}
+
+.exitOverlay:hover {
+
+background-color: black;
+color: white;
+
+}
 
 /* Squirtle Overlay */
 
@@ -130,7 +155,7 @@ header {
 
 }
 
-#selectSquirtle {
+#squirtle {
 
     position: absolute;
     top: 70%;
@@ -138,7 +163,7 @@ header {
 
 }
 
-#selectSquirtle:hover {
+#squirtle:hover {
 
     opacity: .8;
     cursor: pointer;
@@ -155,7 +180,7 @@ header {
 
 }
 
-#selectChar {
+#charmander {
 
     position: absolute;
     top: 70%;
@@ -163,7 +188,7 @@ header {
 
 }
 
-#selectChar:hover {
+#charmander:hover {
 
     opacity: .8;
     cursor: pointer;
@@ -180,7 +205,7 @@ header {
 
 }
 
-#selectBulb {
+#bulbasaur {
 
     position: absolute;
     top: 70%;
@@ -188,7 +213,7 @@ header {
 
 }
 
-#selectBulb:hover {
+#bulbasaur:hover {
 
     opacity: .8;
     cursor: pointer;
@@ -205,7 +230,7 @@ header {
 
 }
 
-#selectPika {
+#pikachu {
 
     position: absolute;
     top: 70%;
@@ -213,7 +238,7 @@ header {
 
 }
 
-#selectPika:hover {
+#pikachu:hover {
 
     opacity: .8;
     cursor: pointer;
@@ -242,6 +267,31 @@ header {
 #pikaBall:hover {
 
     cursor: pointer;
+
+}
+
+#displayP1 {
+
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    right: 53%;
+    z-index:50;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    float: left;
+
+}
+
+#page0 h3 {
+
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    right: 48%;
+    z-index: 50;
+    font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -515,6 +565,7 @@ header {
     height: 250px;
     border-radius: 50px;
     z-index: 5;
+    flex-direction: row;
 
 }
 
@@ -536,13 +587,6 @@ header {
 }
 
 
-
-/* #health2 {
-
-    background-color: green;
-    width: 250px;
-    
-    } */
 
 
 #pokemon {
@@ -578,20 +622,10 @@ header {
     background-color: #eee;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-    z-index: 1;
+    z-index: 10;
 
 }
 
-#pikalabel {
-
-    position: absolute;
-    left: 78%;
-    transform: translateY(-350px);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 25px;
-
-
-}
 
 #pika {
 
@@ -610,12 +644,12 @@ header {
     background-color: #eee;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-    z-index: 1;
+    z-index: 10;
 
 }
 
 
-#pikaside {
+#pikachu {
 
     float: right;
 
@@ -687,6 +721,7 @@ footer {
     text-align: center;
     margin: auto;
     padding: 100px;
+    padding-bottom: 150px;
     width: 1200px;
     height: 100px;
 
@@ -695,13 +730,21 @@ footer {
 footer p {
 
     font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
 
+}
+
+footer p a {
+
+text-decoration: none;
+color: rgb(82, 137, 0);
 }
 
 #rules {
 
     padding: 20px;
     width: 300px;
+    margin-bottom: 50px;
     border-radius: 10px;
     border-width: 5px;
     color: rgb(0, 0, 0);
@@ -748,7 +791,7 @@ footer p {
 #healthBar2 {
 
     position: absolute;
-    transform: translateY(-300px);
+    transform: translateY(300px);
     right: 6%;
     border-radius: 20px;
 
@@ -760,12 +803,20 @@ footer p {
 #healthBar1 {
 
     position: absolute;
-    transform: translateY(-300px);
+    transform: translateY(300px);
     left: 5%;
     border-radius: 20px;
 
 
 }
+
+.pokeFloat {
+
+    animation: bob 2s infinite;
+
+}
+
+
 
 
 .hide {

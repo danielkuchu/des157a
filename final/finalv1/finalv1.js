@@ -6,8 +6,10 @@
     //change to match elements within game
     // bar1 done, bar2, text done, and roll button done, begin button done
 
+    const selectBtn = document.querySelectorAll(".selectBtn"); // Select Buttons
 
-    const select = document.querySelector('#select'); // Select button transition to page 1
+    const player1display = document.querySelector("#displayP1");
+    const player2display = document.querySelector("#displayP2");
 
     const ballSquirtle = document.querySelector("#squirtleBall"); //Select Squirtle- Ball 1
     const ballChar = document.querySelector("#charBall"); //Select Char - Ball 2
@@ -24,35 +26,75 @@
     const closeBulb = document.querySelector("#bulbOverlay button");
     const closePika = document.querySelector("#pikaOverlay button");
 
+    const charPage0 = document.querySelector("#char"); // Charmander behind bush
+    const squirtlePage0 = document.querySelector("#squirt"); // Squirtle behind bush
+    const bulbPage0 = document.querySelector("#bulb"); // Bulbasaur behind bush
+
 
     const startGame = document.getElementById('startgame'); // "begin" button on start page
     const roll = document.getElementById("roll"); // roll button
     const gameControl = document.getElementById('gamecontrol'); // where text is displayed and where roll button sits
+
+
     const rules = document.querySelector("#rules"); // rules button
     const ruleLay = document.querySelector("#rulesOverlay"); // rules overlay display
     const closeRules = document.querySelector("#closeOverlay"); //closing the 
-    const exitOverlay = document.querySelector(".exitOverlay"); // Closing Pokemon Overlays
-    const bush = document.querySelector(".bush"); // Bushes
+
+    const bush1 = document.querySelector("#bush1"); // Bush1
+    const bush2 = document.querySelector("#bush2"); // Bush2
+    const bush3 = document.querySelector("#bush3"); // Bush3
+
+
     let healthBar1 = document.querySelector("#healthBar1 .inner"); //Charmander's healthbar
     let healthBar2 = document.querySelector("#healthBar2 .inner"); //Pikachu's healthbar
+
+
     let audioChar = new Audio("audio/charmandersound.wav"); // Charmander Attack sound
     let audioPika = new Audio("audio/pikachusound.mp3"); // Pikachu Attack 
     let audioBulb = new Audio("audio/bulbasaur.mp3"); // Bulbasaur sound 
     let audioSquirtle = new Audio("audio/squirtle.mp3"); // Squirtle sound
     let audioBush = new Audio("audio/bushes.mp3");
+    let audioBattle = new Audio("audio/battlesound.mp3"); // fight scene music
+    let audioOuch = new Audio("audio/ouch.mp3"); // me saying ouch
+    let audioSoiled = new Audio("audio/soiled.mp3"); // Soiled it
+    let audioSteroids = new Audio("audio/augh.mp3"); // AUUUUGH
+    let audioNervous = new Audio("audio/nervous.mp3"); // nervous
+    let audioBtns = new Audio("audio/button.mp3"); // all button sounds
 
-    //Sound Effects
+    audioBattle.volume = 0.2;
+    audioOuch.volume = 1.0;
+    let counter = 0;
+    
+    for (let i = 0; i < selectBtn.length; i++) {
 
+        selectBtn[i].addEventListener("click", function (event) {
 
-    // Transition to page 1
+            event.preventDefault();
+            audioBtns.play();
+            const thisPokemon = event.target.id;
+            if (counter == 0){
 
-    select.addEventListener("click", function () {
+                gameData.players[0]=thisPokemon;
+                document.querySelector(`#${thisPokemon}`).remove();
+                document.querySelector("#poke1").src=`images/${thisPokemon}.png`;
+                counter++;
+                player1display.innerHTML= `<h2>${thisPokemon}</h2>`;
 
-        document.getElementById("page0").className = "hide";
-        document.getElementById("page1").className = "show";
+            } else if(counter == 1){
 
+                gameData.players[1]=thisPokemon;
+                document.querySelector("#poke2").src=`images/${thisPokemon}.png`;
+                player2display.innerHTML= `<h2>${thisPokemon}</h2>`;
+                document.getElementById("page0").className = "hide";
+                document.getElementById("page1").className = "show";
+            
 
-    });
+            } 
+
+        });
+
+    }
+
 
     //Squirtle Overlay (Open + Close)
 
@@ -60,12 +102,14 @@
 
         squirtleOverlay.className = "show";
         audioSquirtle.play();
+        audioBtns.play();
 
     });
 
     closeSquirtle.addEventListener("click", function () {
 
         squirtleOverlay.className = "hide";
+        audioBtns.play();
 
     });
 
@@ -75,12 +119,14 @@
 
         charOverlay.className = "show"
         audioChar.play();
+        audioBtns.play();
 
     });
 
     closeChar.addEventListener("click", function () {
 
         charOverlay.className = "hide";
+        audioBtns.play();
 
     });
 
@@ -90,6 +136,7 @@
 
         bulbOverlay.className = "show";
         audioBulb.play();
+        audioBtns.play();
         console.log("Bulbasaur Overlay");
 
     });
@@ -97,6 +144,7 @@
     closeBulb.addEventListener("click", function () {
 
         bulbOverlay.className = "hide";
+        audioBtns.play();
 
     });
 
@@ -106,6 +154,7 @@
 
         pikaOverlay.className = "show";
         audioPika.play();
+        audioBtns.play();
         console.log("Pikachu Overlay");
 
     });
@@ -113,6 +162,7 @@
     closePika.addEventListener("click", function () {
 
         pikaOverlay.className = "hide";
+        audioBtns.play();
 
     });
 
@@ -122,6 +172,7 @@
 
         document.getElementById("page1").className = "hide";
         document.getElementById("page2").className = "show";
+        audioBtns.play();
 
     });
 
@@ -130,6 +181,7 @@
     rules.addEventListener("click", function (event) {
         event.preventDefault();
         ruleLay.className = "show";
+        audioBtns.play();
 
 
     });
@@ -140,29 +192,40 @@
         event.preventDefault();
         console.log("Closing Rules Overlay");
         ruleLay.className = "hide";
+        audioBtns.play();
     });
 
     //Bush Hover
 
-    bush.addEventListener("mouseover", function () {
+    bush1.addEventListener("mouseover", function () {
 
         audioBush.play();
+        charPage0.className = "pokeFloat";
 
     });
 
-    //Bush Sound stop
 
-    bush.addEventListener("mouseoff", function () {
+    bush2.addEventListener("mouseover", function () {
 
-
+        audioBush.play();
+        squirtlePage0.className = "pokeFloat";
 
     });
+
+
+    bush3.addEventListener("mouseover", function () {
+
+        audioBush.play();
+        bulbPage0.className = "pokeFloat";
+
+    });
+
+
 
     //Game Data
 
     const gameData = {
 
-        pokemon: ["Squirtle", "Charmander", "Bulbasaur", "Pikachu"],
         players: ['Charmander', 'Pikachu'], //What do I change this to?
         score: [100, 100],
         effects: [-15, -35, -5, 5, -4, 0, -15], // [score] - 10??
@@ -173,7 +236,7 @@
             "The enemy tapped into your secret steroid stash! HP slightly restored", // [4] +5 hp
             "You charged up for a game-ending attack!.. But you missed.", // [5] Turn skipped
             "You're feeling a little shy... Turn skipped", // [6] Turn skipped
-            "Your pokemon got confused the other player and they attacked themself!", // [7] -15 hp
+            "Your pokemon confused the other player and they attacked themself!", // [7] -15 hp
 
         ],
         roll: 0,
@@ -186,6 +249,8 @@
         gameData.index = Math.round(Math.random());
         gameControl.innerHTML = '<h2>The Battle is Beginning</h2>';
         setTimeout(setUpTurn, 4000);
+        audioBattle.play();
+        audioBtns.play();
 
     });
 
@@ -202,6 +267,8 @@
     roll.addEventListener('click', function () {
 
         throwDice();
+        audioBtns.play();
+
 
     });
 
@@ -209,11 +276,35 @@
     function throwDice() {
         const attack = Math.floor(Math.random() * 7); //using ceil could result in a zero
 
+        if ( attack == 0){
 
-        //setting/switching player
-        // addding to max score will be problem
+            audioOuch.play(); //Is this possible? Audio assigned to move
 
-        // set progress bar to overflow hidden
+        } else if ( attack == 1){
+
+            audioOuch.play();
+
+        } else if ( attack == 2){
+
+            audioSoiled.play();
+
+        } else if ( attack == 3) {
+
+            audioSteroids.play();
+
+        } else if ( attack == 4) {
+
+            audioSoiled.play();
+
+        } else if ( attack == 5) {
+
+            audioNervous.play();
+
+        } else if ( attack == 6) {
+
+            audioSteroids.play()
+
+        } 
 
         if (gameData.index == 0) {
 
