@@ -73,7 +73,7 @@ header {
 #selectTable {
 
     position: absolute;
-    margin-top: 750px;
+    margin-top: 450px;
     margin-left: 150px;
     padding: auto;
 
@@ -451,7 +451,7 @@ color: white;
 #bush1 {
 
     position: relative;
-    right: 15%;
+    left: 10%;
     z-index: 5;
 
 }
@@ -472,7 +472,7 @@ color: white;
 #bush3 {
 
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 42%;
     z-index: 5;
 
@@ -511,7 +511,6 @@ color: white;
 
     position: relative;
     left: 10%;
-    z-index: -3;
 
 }
 
@@ -531,7 +530,7 @@ color: white;
 
 }
 
-/* Char */
+/* Char
 
 #bushA {
 
@@ -541,12 +540,9 @@ color: white;
 
 #bushB {
 
-    position: absolute;
-    top: 55%;
-    left: 70%;
     z-index: 1;
 
-}
+} */
 
 
 #grassflat {
@@ -605,11 +601,10 @@ color: white;
 
 }
 
-#char2 {
+#poke1 {
 
     position: absolute;
     left: 10%;
-    transform: translateY(-150px);
 }
 
 #health2 {
@@ -649,7 +644,7 @@ color: white;
 }
 
 
-#pikachu {
+#poke2 {
 
     float: right;
 
@@ -657,23 +652,27 @@ color: white;
 
 #roll {
 
+    margin-top: 5px;
     padding: 20px;
     border-radius: 20px;
+    border-width: 7px;
     position: relative;
     left: 45%;
+    background-color: red;
+    color: white;
 
 }
 
 #roll:hover {
 
-    background-color: black;
+    background-color: rgb(128, 0, 0);
     color: white;
 
 }
 
 #textbox {
     position: absolute;
-    transform: translateY(150px);
+    transform: translateY(450px);
     height: 200px;
     width: 1200px;
     background-color: rgb(255, 255, 255);
@@ -812,11 +811,17 @@ color: rgb(82, 137, 0);
 
 .pokeFloat {
 
-    animation: bob 2s infinite;
+    animation: bushFloat 2s infinite;
 
 }
 
+@keyframes bushFloat {
 
+0% {transform: translateY(0);}
+50% {transform: translateY(-20);}
+100% {transform: translateY(20);}
+
+}
 
 
 .hide {

@@ -8,6 +8,8 @@
 
     const selectBtn = document.querySelectorAll(".selectBtn"); // Select Buttons
 
+    const main = document.querySelector("#container");
+
     const player1display = document.querySelector("#displayP1");
     const player2display = document.querySelector("#displayP2");
 
@@ -59,7 +61,11 @@
     let audioSoiled = new Audio("audio/soiled.mp3"); // Soiled it
     let audioSteroids = new Audio("audio/augh.mp3"); // AUUUUGH
     let audioNervous = new Audio("audio/nervous.mp3"); // nervous
+    let audioHeal = new Audio("audio/heal.mp3"); // healed
+    let audioVictory = new Audio("audio/victory.mp3") // winning conditon music
+    let audioMiss = new Audio("audio/missed.mp3"); // missed game ending attack
     let audioBtns = new Audio("audio/button.mp3"); // all button sounds
+    let audioUhoh = new Audio("audio/uhoh.mp3"); // uh oh
 
     audioBattle.volume = 0.2;
     audioOuch.volume = 1.0;
@@ -200,7 +206,7 @@
     bush1.addEventListener("mouseover", function () {
 
         audioBush.play();
-        charPage0.className = "pokeFloat";
+        // charPage0.className = "pokeFloat";
 
     });
 
@@ -208,7 +214,7 @@
     bush2.addEventListener("mouseover", function () {
 
         audioBush.play();
-        squirtlePage0.className = "pokeFloat";
+        // squirtlePage0.className = "pokeFloat";
 
     });
 
@@ -216,9 +222,33 @@
     bush3.addEventListener("mouseover", function () {
 
         audioBush.play();
-        bulbPage0.className = "pokeFloat";
+        // bulbPage0.className = "pokeFloat";
 
     });
+
+    bush1.addEventListener("mouseout", function () {
+
+        audioBush.pause();
+        // charPage0.className = "";
+
+    });
+
+
+    bush2.addEventListener("mouseout", function () {
+
+        audioBush.pause();
+        // squirtlePage0.className = "";
+
+    });
+
+
+    bush3.addEventListener("mouseout", function () {
+
+        audioBush.pause();
+        // bulbPage0.className = "";
+
+    });
+
 
 
 
@@ -231,9 +261,9 @@
         effects: [-15, -35, -5, 5, -4, 0, -15], // [score] - 10??
         messages: [
             "You used a weak attack! ", // [1] -10 hp
-            "You used a strong attack!`", //[2] -25 hp
+            "You used a strong attack!", //[2] -25 hp
             "You made the other Pokemon soil themself!", // [3] -5hp
-            "The enemy tapped into your secret steroid stash! HP slightly restored", // [4] +5 hp
+            "The enemy took some steroids. Their HP was restored", // [4] +5 hp
             "You charged up for a game-ending attack!.. But you missed.", // [5] Turn skipped
             "You're feeling a little shy... Turn skipped", // [6] Turn skipped
             "Your pokemon confused the other player and they attacked themself!", // [7] -15 hp
@@ -247,8 +277,8 @@
 
     startGame.addEventListener('click', function () {
         gameData.index = Math.round(Math.random());
-        gameControl.innerHTML = '<h2>The Battle is Beginning</h2>';
-        setTimeout(setUpTurn, 4000);
+        gameControl.innerHTML = '<h2>The Battle is Beginning!</h2>';
+        setTimeout(setUpTurn, 3500);
         audioBattle.play();
         audioBtns.play();
 
@@ -290,11 +320,11 @@
 
         } else if ( attack == 3) {
 
-            audioSteroids.play();
+            audioHeal.play();
 
         } else if ( attack == 4) {
 
-            audioSoiled.play();
+            audioMiss.play();
 
         } else if ( attack == 5) {
 
@@ -302,7 +332,7 @@
 
         } else if ( attack == 6) {
 
-            audioSteroids.play()
+            audioUhoh.play()
 
         } 
 
@@ -312,8 +342,9 @@
             gameControl.innerHTML = gameData.messages[attack]; //use css to cover up roll button
             if (gameData.score[1] < 1) {
 
-                gameControl.innerHTML = `<h3>Charmander has won the battle!</h3>`;
+                gameControl.innerHTML = `<h3>${gameData.players[0]} has won the battle!</h3>`;
                 healthBar2.style.width = `0%`;
+                audioVictory.play();
 
             } else {
 
@@ -322,7 +353,7 @@
 
                 setTimeout(function () {
                     gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
-                }, 3500);
+                }, 3000);
 
 
             }
@@ -337,7 +368,9 @@
 
             if (gameData.score[0] < 1) {
 
-                gameControl.innerHTML = `<h3>Pikachu has won the battle!</h3>`;
+                gameControl.innerHTML = `<h3>${gameData.players[1]} has won the battle!</h3>`;
+                audioVictory.play();
+                audioBattle.pause();
                 healthBar1.style.width = `0%`;
 
             } else {
@@ -347,7 +380,7 @@
 
                 setTimeout(function () {
                     gameControl.innerHTML = `<p>It's ${gameData.players[gameData.index]}'s turn!</p>`;
-                }, 3500);
+                }, 3000);
 
 
             }
