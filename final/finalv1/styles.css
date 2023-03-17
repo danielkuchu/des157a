@@ -647,6 +647,7 @@ color: white;
 #poke2 {
 
     float: right;
+    transform: scaleX(-1);
 
 }
 
