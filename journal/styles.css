@@ -28,7 +28,15 @@ margin: 0;
 a {
 
     text-decoration: none;
-    color: rgb(152, 0, 0);
+    color: rgb(0, 207, 230);
+
+}
+
+
+#container div:hover {
+
+transform: scale(120%);
+transition-duration: 1s;
 
 }
 
