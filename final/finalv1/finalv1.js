@@ -66,9 +66,12 @@
     let audioMiss = new Audio("audio/missed.mp3"); // missed game ending attack
     let audioBtns = new Audio("audio/button.mp3"); // all button sounds
     let audioUhoh = new Audio("audio/uhoh.mp3"); // uh oh
+    let theme = new Audio("audio/theme.mp3"); // theme song
 
     audioBattle.volume = 0.2;
     audioOuch.volume = 1.0;
+    audioTheme.volume = 0.5;
+
     let counter = 0;
     
     for (let i = 0; i < selectBtn.length; i++) {
@@ -93,6 +96,7 @@
                 player2display.innerHTML= `<h2>${thisPokemon}</h2>`;
                 document.getElementById("page0").className = "hide";
                 document.getElementById("page1").className = "show";
+                theme.play();
             
 
             } 
@@ -206,7 +210,7 @@
     bush1.addEventListener("mouseover", function () {
 
         audioBush.play();
-        // charPage0.className = "pokeFloat";
+        charPage0.className = "pokeFloat";
 
     });
 
@@ -214,7 +218,7 @@
     bush2.addEventListener("mouseover", function () {
 
         audioBush.play();
-        // squirtlePage0.className = "pokeFloat";
+        squirtlePage0.className = "pokeFloat";
 
     });
 
@@ -222,14 +226,14 @@
     bush3.addEventListener("mouseover", function () {
 
         audioBush.play();
-        // bulbPage0.className = "pokeFloat";
+        bulbPage0.className = "pokeFloat";
 
     });
 
     bush1.addEventListener("mouseout", function () {
 
         audioBush.pause();
-        // charPage0.className = "";
+        charPage0.className = "";
 
     });
 
@@ -237,7 +241,7 @@
     bush2.addEventListener("mouseout", function () {
 
         audioBush.pause();
-        // squirtlePage0.className = "";
+        squirtlePage0.className = "";
 
     });
 
@@ -245,7 +249,7 @@
     bush3.addEventListener("mouseout", function () {
 
         audioBush.pause();
-        // bulbPage0.className = "";
+        bulbPage0.className = "";
 
     });
 
@@ -281,6 +285,7 @@
         setTimeout(setUpTurn, 3500);
         audioBattle.play();
         audioBtns.play();
+        theme.pause();
 
     });
 
@@ -308,7 +313,7 @@
 
         if ( attack == 0){
 
-            audioOuch.play(); //Is this possible? Audio assigned to move
+            audioOuch.play();
 
         } else if ( attack == 1){
 
@@ -345,6 +350,7 @@
                 gameControl.innerHTML = `<h3>${gameData.players[0]} has won the battle!</h3>`;
                 healthBar2.style.width = `0%`;
                 audioVictory.play();
+                audioBattle.pause();
 
             } else {
 

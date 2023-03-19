@@ -122,25 +122,26 @@ header {
     }
 
 }
+
 /* Exit Overlay Button */
 
 .exitOverlay {
 
-position: absolute;
-right: 43%;
-padding: 12px;
-width: 100px;
-border-radius: 7px;
-border-width: 5px;
-font-size: 15px;
-font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    right: 43%;
+    padding: 12px;
+    width: 100px;
+    border-radius: 7px;
+    border-width: 5px;
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
 
 }
 
 .exitOverlay:hover {
 
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
 
 }
 
@@ -276,7 +277,7 @@ color: white;
     text-align: center;
     top: 20%;
     right: 53%;
-    z-index:50;
+    z-index: 50;
     font-size: 30px;
     font-family: 'Press Start 2P', cursive;
     float: left;
@@ -391,7 +392,7 @@ color: white;
     width: 1200px;
     max-width: 1200px;
     height: 900px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(161, 247, 255);
     border-radius: 50px;
     box-shadow: 3px 3px 23px 1px #767676;
     display: flex;
@@ -414,7 +415,6 @@ color: white;
     border-width: 5px;
     color: rgb(0, 0, 0);
     background-color: white;
-    box-shadow: 3px 3px 23px 1px #00b2be;
     font-family: 'Press Start 2P', cursive;
     animation: blink 1s steps(4, start) infinite;
 
@@ -448,10 +448,11 @@ color: white;
 }
 
 /* Char's Bush */
+
 #bush1 {
 
     position: relative;
-    left: 10%;
+    bottom: 60%;
     z-index: 5;
 
 }
@@ -460,9 +461,8 @@ color: white;
 
 #bush2 {
 
-    position: absolute;
-    right: 27%;
-    top: 60%;
+    position: relative;
+    bottom: 20%;
     z-index: 5;
 
 }
@@ -471,9 +471,8 @@ color: white;
 
 #bush3 {
 
-    position: absolute;
-    top: 50%;
-    left: 42%;
+    position: relative;
+    bottom: 20%;
     z-index: 5;
 
 }
@@ -510,23 +509,20 @@ color: white;
 #char {
 
     position: relative;
-    left: 10%;
 
 }
 
 #squirt {
 
     position: relative;
-    right: 90%;
-    transform: translateY(120px);
+    bottom: 80%;
 
 }
 
 #bulb {
 
     position: relative;
-    transform: translateY(-350px);
-    left: 49%;
+    bottom: 70%;
 
 }
 
@@ -544,26 +540,23 @@ color: white;
 
 } */
 
-
-#grassflat {
-
-    position: relative;
-    top: 6%;
-    height: 50px;
-    padding: 50px;
-    background-color: rgb(0, 153, 0);
-
-}
-
 #greenfloor {
 
-    background-color: rgb(0, 153, 0);
-    height: 250px;
-    border-radius: 50px;
+    background-color: rgb(135, 236, 112);
+    height: 300px;
+    border-radius: 0 0 50px 50px;
     z-index: 5;
-    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
 
 }
+
+
+#greenfloor div {
+
+    width: 400px;
+    text-align: center;
+  }
 
 #page2 {
 
@@ -736,8 +729,8 @@ footer p {
 
 footer p a {
 
-text-decoration: none;
-color: rgb(82, 137, 0);
+    text-decoration: none;
+    color: rgb(82, 137, 0);
 }
 
 #rules {
@@ -818,9 +811,17 @@ color: rgb(82, 137, 0);
 
 @keyframes bushFloat {
 
-0% {transform: translateY(0);}
-50% {transform: translateY(-20);}
-100% {transform: translateY(20);}
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 
 }
 
