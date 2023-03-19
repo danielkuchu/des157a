@@ -8,7 +8,7 @@
 
     const selectBtn = document.querySelectorAll(".selectBtn"); // Select Buttons
 
-    const main = document.querySelector("#container");
+    const overlayOpacity = document.querySelector("#overlayOpacity");
 
     const player1display = document.querySelector("#displayP1");
     const player2display = document.querySelector("#displayP2");
@@ -70,7 +70,7 @@
 
     audioBattle.volume = 0.2;
     audioOuch.volume = 1.0;
-    audioTheme.volume = 0.5;
+    theme.volume = 0.5;
 
     let counter = 0;
     
@@ -111,6 +111,7 @@
     ballSquirtle.addEventListener("click", function () {
 
         squirtleOverlay.className = "show";
+        // overlayOpacity.className= "show";
         audioSquirtle.play();
         audioBtns.play();
 
@@ -119,6 +120,7 @@
     closeSquirtle.addEventListener("click", function () {
 
         squirtleOverlay.className = "hide";
+        // overlayOpacity.className= "hide";
         audioBtns.play();
 
     });
@@ -128,6 +130,7 @@
     ballChar.addEventListener("click", function () {
 
         charOverlay.className = "show"
+        // overlayOpacity.className= "show";
         audioChar.play();
         audioBtns.play();
 
@@ -136,6 +139,7 @@
     closeChar.addEventListener("click", function () {
 
         charOverlay.className = "hide";
+        // overlayOpacity.className= "hide";
         audioBtns.play();
 
     });
@@ -145,6 +149,7 @@
     ballBulb.addEventListener("click", function () {
 
         bulbOverlay.className = "show";
+        // overlayOpacity.className= "show";
         audioBulb.play();
         audioBtns.play();
         console.log("Bulbasaur Overlay");
@@ -154,6 +159,7 @@
     closeBulb.addEventListener("click", function () {
 
         bulbOverlay.className = "hide";
+        // overlayOpacity.className= "hide";
         audioBtns.play();
 
     });
@@ -163,6 +169,7 @@
     ballPika.addEventListener("click", function () {
 
         pikaOverlay.className = "show";
+        // overlayOpacity.className= "show";
         audioPika.play();
         audioBtns.play();
         console.log("Pikachu Overlay");
@@ -172,6 +179,7 @@
     closePika.addEventListener("click", function () {
 
         pikaOverlay.className = "hide";
+        // overlayOpacity.className= "hide";
         audioBtns.play();
 
     });
