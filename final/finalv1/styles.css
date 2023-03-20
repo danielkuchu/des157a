@@ -253,27 +253,37 @@ header {
 
 /* Pokeball Hovers */
 
+
 #squirtleBall:hover {
 
     cursor: pointer;
+    scale: 110%;
+    transition-duration: 1s;
 
 }
 
 #charBall:hover {
 
     cursor: pointer;
+    scale: 110%;
+    transition-duration: 1s;
+
 
 }
 
 #bulbBall:hover {
 
     cursor: pointer;
+    scale: 110%;
+    transition-duration: 1s;
 
 }
 
 #pikaBall:hover {
 
     cursor: pointer;
+    scale: 110%;
+    transition-duration: 1s;
 
 }
 
@@ -392,6 +402,25 @@ header {
 
 }
 
+@keyframes boxShadow {
+
+    0% {
+        box-shadow: 0px 10px 20px 1px #767676;;
+    }
+
+    50%{
+        box-shadow: 0px 10px 40px 1px #767676;;
+
+    }
+
+    100% {
+        box-shadow: 0px 10px 20px 1px #767676;;
+    }
+
+
+}
+
+
 #container {
 
     margin: auto;
@@ -400,11 +429,12 @@ header {
     height: 900px;
     background-color: rgb(161, 247, 255);
     border-radius: 50px;
-    box-shadow: 3px 3px 10px 1px #767676;
+    /* box-shadow: 0px 10px 20px 1px #767676; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     z-index: -100;
+    animation: boxShadow 2s infinite;
 
 }
 
@@ -570,6 +600,16 @@ header {
     top: 30%;
     text-align: center;
 
+}
+
+.battleBackground {
+
+    background-image: url("images/fightField1.png");
+    background-repeat: no-repeat;
+    background-size: 1400px 1000px;
+    background-position-x: center;
+    background-position-y: -100px;
+    margin: auto;
 
 }
 
@@ -604,6 +644,7 @@ header {
 
     position: absolute;
     left: 10%;
+    transform: translateY(-100px);
 }
 
 #health2 {
@@ -647,7 +688,8 @@ header {
 
     position: relative;
     float: right;
-    transform: scaleX(-1);
+    transform: scaleX(-1) translateY(-100px);
+    
 
 }
 
@@ -673,12 +715,12 @@ header {
 
 #textbox {
     position: absolute;
-    transform: translateY(300px);
+    transform: translateY(275px);
     height: 200px;
-    width: 1200px;
+    width: 1195px;
     background-color: rgb(255, 255, 255);
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 0 0 35px 35px;
     text-align: left;
     font-size: 20px;
     font-family: 'Press Start 2P', cursive;
@@ -741,6 +783,25 @@ footer p a {
     color: rgb(82, 137, 0);
 }
 
+@keyframes boxShadow2 {
+
+    0% {
+        box-shadow: 0px 0px 20px 1px #767676;;
+    }
+
+    50%{
+        box-shadow: 0px 0px 40px 1px #767676;;
+
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 1px #767676;;
+    }
+
+
+}
+
+
 #rules {
 
     padding: 20px;
@@ -750,7 +811,7 @@ footer p a {
     border-width: 5px;
     color: rgb(0, 0, 0);
     background-color: white;
-    box-shadow: 3px 3px 23px 1px #a0a0a0;
+    animation: boxShadow2 2s infinite;
     font-family: 'Press Start 2P', cursive;
 
 }
@@ -792,7 +853,7 @@ footer p a {
 #healthBar2 {
 
     position: absolute;
-    transform: translateY(-300px);
+    transform: translateY(-200px);
     right: 5%;
     border-radius: 20px;
 
@@ -804,7 +865,7 @@ footer p a {
 #healthBar1 {
 
     position: absolute;
-    transform: translateY(-300px);
+    transform: translateY(-200px);
     left: 5%;
     border-radius: 20px;
 
@@ -842,6 +903,12 @@ footer p a {
     z-index: 69;
 
 } */
+
+.white {
+
+background-color: white;
+
+}
 
 
 .hide {

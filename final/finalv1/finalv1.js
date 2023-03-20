@@ -9,6 +9,7 @@
     const selectBtn = document.querySelectorAll(".selectBtn"); // Select Buttons
 
     const overlayOpacity = document.querySelector("#overlayOpacity");
+    const main = document.querySelector("#container");
 
     const player1display = document.querySelector("#displayP1");
     const player2display = document.querySelector("#displayP2");
@@ -67,10 +68,16 @@
     let audioBtns = new Audio("audio/button.mp3"); // all button sounds
     let audioUhoh = new Audio("audio/uhoh.mp3"); // uh oh
     let theme = new Audio("audio/theme.mp3"); // theme song
+    let audioStadium = new Audio("audio/stadium.mp3"); // stadium ambiance
+    let audioBoo = new Audio("audio/boo.mp3"); // BOOOOOO
+    let audioWinner = new Audio("audio/winner.mp3"); // WINNER CHEERS
+    let audioWoo = new Audio("audio/niceJob.mp3"); // WOO
 
     audioBattle.volume = 0.2;
+    audioStadium.volume = 0.9;
     audioOuch.volume = 1.0;
-    theme.volume = 0.5;
+    theme.volume = 0.25;
+    audioBush.volume = 1.0;
 
     let counter = 0;
     
@@ -190,6 +197,7 @@
 
         document.getElementById("page1").className = "hide";
         document.getElementById("page2").className = "show";
+        main.className= "battleBackground"
         audioBtns.play();
 
     });
@@ -292,6 +300,7 @@
         gameControl.innerHTML = '<h2>The Battle is Beginning!</h2>';
         setTimeout(setUpTurn, 3500);
         audioBattle.play();
+        audioStadium.play();    
         audioBtns.play();
         theme.pause();
 
@@ -322,10 +331,12 @@
         if ( attack == 0){
 
             audioOuch.play();
+            audioWoo.play();
 
         } else if ( attack == 1){
 
             audioOuch.play();
+            audioWoo.play();
 
         } else if ( attack == 2){
 
@@ -338,10 +349,12 @@
         } else if ( attack == 4) {
 
             audioMiss.play();
+            audioBoo.play();
 
         } else if ( attack == 5) {
 
             audioNervous.play();
+            audioBoo.play();
 
         } else if ( attack == 6) {
 
@@ -358,6 +371,7 @@
                 gameControl.innerHTML = `<h3>${gameData.players[0]} has won the battle!</h3>`;
                 healthBar2.style.width = `0%`;
                 audioVictory.play();
+                audioWinner.play();
                 audioBattle.pause();
 
             } else {
@@ -384,6 +398,7 @@
 
                 gameControl.innerHTML = `<h3>${gameData.players[1]} has won the battle!</h3>`;
                 audioVictory.play();
+                audioWinner.play();
                 audioBattle.pause();
                 healthBar1.style.width = `0%`;
 
