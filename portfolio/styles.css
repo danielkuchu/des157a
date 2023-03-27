@@ -1,0 +1,51 @@
+header {
+
+    padding: auto;
+    margin: auto;
+    height: 150px;
+    width: 1200px;
+
+}
+
+#rightnav img, h2{
+
+display: inline;
+float: right;
+margin: auto;
+
+}
+
+#rightnav img {
+
+    padding-right: 20px;
+
+}
+
+#rightnav h2 {
+
+font-size: 30px;
+padding-left: 30px;
+padding-right: 30px;
+
+}
+
+
+#navbar li a {
+
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin: auto;
+
+}
+
+#navbar li {
+
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    display: inline;
+    font-size: 30px;
+    padding-right: 20px;
+
+}
